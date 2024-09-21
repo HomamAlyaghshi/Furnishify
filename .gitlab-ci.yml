@@ -1,0 +1,16 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+pages:
+  script:
+    - npm install  # تثبيت الحزم المطلوبة للمشروع
+    - npm run build  # بناء المشروع (React) أو تصديره (Next.js)
+    - cp -r build/ public/  # في حالة React، نسخ مجلد build إلى public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

@@ -8,10 +8,11 @@ import Banner from "../card/Banner";
 import BlogSectaion from "../card/BlogSectaion";
 import Newsletter from "../card/Newsletter";
 import Footer from "../card/Footer";
+import NotificationBar from "../card/NotificationBar";
 const HomePage = () => {
   return (
     <div className="w-[1440px] h-[4307px]">
-      <div className="h-[40px] bg-slate-400"></div>
+      <NotificationBar />
       <NavBar />
       <Slider />
       <BannerGrid />

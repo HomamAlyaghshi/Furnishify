@@ -21,7 +21,7 @@ const BlogSection = () => {
   ]);
 
   return (
-    <div className="w-[1440px] h-[669px] py-[48px] pl-[160px] grid gap-[24px] justify-center items-center text-blackButton">
+    <div className="w-[1440px] h-[669px] py-[48px]  grid gap-[24px] justify-center items-center text-blackButton">
       <div className="w-[1121px] h-[88px] flex justify-between items-center">
         <div className="font-poppins text-[40px] font-medium leading-[44px] tracking-[-0.4px] text-left">
           Articles

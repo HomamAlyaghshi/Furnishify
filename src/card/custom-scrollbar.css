@@ -1,0 +1,19 @@
+/* لتعديل خصائص الشريط */
+#custom-slider::-webkit-scrollbar {
+    height: 4px; /* فقط تحديد ارتفاع الشريط */
+
+  }
+  
+  #custom-slider::-webkit-scrollbar-thumb {
+    background-color: #343839; /* لون الشريط */
+    border-radius: 80px 80px 80px 80px; /* نصف القطر */
+    opacity: 1; /* الشفافية */
+
+  }
+  
+  #custom-slider::-webkit-scrollbar-track {
+    background-color: #E8ECEF; /* خلفية شفافة */
+  }
+  
+  #custom-slider {
+    overflow-y: hidden; /* إخفاء الشريط العمودي */ }

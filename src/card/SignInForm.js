@@ -1,5 +1,6 @@
 import React from "react";
 import { EyeIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const SignInForm = () => {
   return (
@@ -11,9 +12,11 @@ const SignInForm = () => {
         <p className="font-inter text-base font-normal leading-6 text-left text-text_neutral ">
           Don’t have an accout yet?
         </p>
-        <button className="font-inter text-kiwi text-base font-semibold leading-6 text-left ml-1 ">
-          Sign Up
-        </button>
+        <Link to="/signup">
+          <button className="font-inter text-kiwi text-base font-semibold leading-6 text-left ml-1 ">
+            Sign Up
+          </button>
+        </Link>
       </div>
 
       <div className="h-[170px] mb-[32px] text-text_neutral">
@@ -42,10 +45,12 @@ const SignInForm = () => {
           </button>
         </div>
       </div>
-      <button className="w-full h-[48px] mt-[12px] text-white bg-blackButton px-[10px] rounded-[8px] flex items-center justify-center">
-        {" "}
-        Sign In
-      </button>
+      <Link to="/homepage">
+        <button className="w-full h-[48px] mt-[12px] text-white bg-blackButton px-[10px] rounded-[8px] flex items-center justify-center">
+          {" "}
+          Sign In
+        </button>
+      </Link>
     </form>
   );
 };

@@ -53,7 +53,7 @@ const BannerGrid = () => {
         <div className="relative h-1/2">
           <img
             alt="banner2"
-            src="/images/banner2.png"
+            src="/images/banner3.png"
             className="w-full h-full object-cover"
           />
           {/*  العناصر فوق الصورة */}

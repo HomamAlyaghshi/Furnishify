@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-blackButton h-[249px] w-[1440px]  py-[80px] px-[160px] pb-[32px] grid gap-[49px]">
+    <div className="bg-blackButton h-[320px] w-[1440px]  py-[80px] px-[160px] pb-[32px] grid gap-[49px]">
       <div className="flex w-[1120px] h-[32px] justify-between">
         <div className="flex w-[544px]  justify-between ">
           <p className="w-[105px] font-poppins text-[24px] font-[500] leading-[24px] text-center text-white">

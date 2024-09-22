@@ -1,19 +1,22 @@
 import React from "react";
 import SignInForm from "../card/SignInForm";
+
 const SignIn = () => {
   return (
-    <div class=" mx-auto h-[1080px] ">
-      <div class="flex h-full">
-        <div class="w-1/2 flex items-center justify-center">
+    <div className="mx-auto">
+      <div className="flex flex-col md:flex-row h-full">
+        {/* صورة للهواتف */}
+        <div className="w-full md:w-1/2 h-[430px] md:h-auto">
           <img
             src="/images/Left.png"
             alt="Left"
-            class="w-full h-full object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div class="w-1/2  flex items-center justify-center gap-[32px] ">
-          <div className=" w-[456px] h-[376px] space-y-8    ">
+        {/* نموذج تسجيل الدخول */}
+        <div className="w-full md:w-1/2 flex items-center justify-center p-4">
+          <div className="w-full max-w-[456px] h-auto space-y-8">
             <SignInForm />
           </div>
         </div>

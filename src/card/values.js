@@ -26,22 +26,22 @@ const Values = () => {
   ]);
 
   return (
-    <div className="w-[1440px] h-[316px] py-[48px] pl-[160px]   gap-[48px]  flex items-center justify-around">
+    <div className="w-full max-w-[1440px] py-[48px] px-[16px] flex flex-wrap items-center justify-around gap-[48px]">
       {valueItems.map((item, index) => (
         <div
           key={index}
-          className="w-[262px] h-[220px] p-[48px] grid gap-[16px] bg-background_50 items-center justify-center"
+          className="w-full max-w-[262px] h-auto p-[24px] flex flex-col items-center bg-background_50 text-center"
         >
           <img
             alt={item.title}
             src={item.image}
-            className="w-[40px] h-[36px] text-blackButton"
+            className="w-[40px] h-[36px] mb-[16px]"
           />
-          <div className="w-[198px] h-[60px]">
-            <p className="font-poppins text-[20px] font-medium leading-[28px] text-left text-blackButton">
+          <div className="w-full">
+            <p className="font-poppins text-[20px] font-medium leading-[28px] text-blackButton">
               {item.title}
             </p>
-            <p className="font-poppins text-[14px] font-normal leading-[24px] text-left text-blackButton_50">
+            <p className="font-poppins text-[14px] font-normal leading-[24px] text-blackButton_50">
               {item.subtitle}
             </p>
           </div>

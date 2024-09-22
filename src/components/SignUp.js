@@ -1,19 +1,22 @@
 import React from "react";
 import SignUpForm from "../card/SignUpForm";
+
 const SignUp = () => {
   return (
-    <div class=" mx-auto h-[1080px]">
-      <div class="flex h-full">
-        <div class="w-1/2 flex items-center justify-center">
+    <div className="mx-auto">
+      <div className="flex flex-col md:flex-row">
+        {/* صورة للهواتف */}
+        <div className="w-full md:w-1/2 h-[430px] md:h-auto">
           <img
             src="/images/Left.png"
             alt="Left"
-            class="w-full h-full object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div class="w-1/2  flex items-center justify-center ">
-          <div className=" w-[456px] h-[520px] space-y-8 bg-neutral1   ">
+        {/* نموذج التسجيل */}
+        <div className="w-full md:w-1/2 flex items-center justify-center p-4">
+          <div className="w-full max-w-[456px] h-auto space-y-8 bg-neutral1">
             <SignUpForm />
           </div>
         </div>

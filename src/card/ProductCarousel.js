@@ -1,5 +1,5 @@
 import React from "react";
-import CardProduct from "./CardProduct";
+import ProductList from "./ProductList";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const ProductCarousel = () => {
@@ -19,11 +19,8 @@ const ProductCarousel = () => {
 
       {/** الصور */}
       <div className="flex overflow-x-auto no-scrollbar">
-        <CardProduct />
+        <ProductList />
       </div>
-
-      {/** السلايدر - يمكن استخدام مكتبة سلايدر مثل Swiper هنا */}
-      <div></div>
     </div>
   );
 };

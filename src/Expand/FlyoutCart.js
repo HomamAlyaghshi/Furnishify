@@ -2,7 +2,32 @@ import React, { useState } from "react";
 import QuantityButtonSmall from "./QuantityButtonSmall";
 
 const FlyoutCart = () => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState([
+    {
+      id: 1,
+      name: "Tray Table",
+      color: "Black",
+      price: 19.23,
+      image: "/images/cart1.png",
+      quantity: 1,
+    },
+    {
+      id: 2,
+      name: "Chair",
+      color: "Red",
+      price: 29.99,
+      image: "/images/cart1.png",
+      quantity: 1,
+    },
+    {
+      id: 3,
+      name: "Sofa",
+      color: "Blue",
+      price: 99.99,
+      image: "/images/cart1.png",
+      quantity: 1,
+    },
+  ]);
 
   const removeItem = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));

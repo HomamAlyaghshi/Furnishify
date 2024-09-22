@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import QuantityButtonSmall from "./QuantityButtonSmall";
 
-const FlyoutCart = () => {
+const FlyoutCart = ({ onClose }) => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -33,6 +33,20 @@ const FlyoutCart = () => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        onClose(); // إغلاق الكارت عند الضغط على Esc
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
   return (
     <div className="fixed top-0 right-0 w-[413px] h-[1024px] bg-white py-[40px] px-[25px] flex flex-col justify-between z-30">
       <div className="w-[365px] max-h-[530px] flex flex-col">
@@ -44,7 +58,7 @@ const FlyoutCart = () => {
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white h-[144px] border-b-[1px] border-b-blackButton_50 flex items-center gap-[16px] p-2" // إضافة padding هنا
+                className="bg-white h-[144px] border-b-[1px] border-b-blackButton_50 flex items-center gap-[16px] p-2"
               >
                 <div className="flex gap-[10px] items-center w-full">
                   <img
@@ -53,8 +67,6 @@ const FlyoutCart = () => {
                     className="h-full w-[80px] object-contain"
                   />
                   <div className="flex flex-col justify-between h-full flex-grow">
-                    {" "}
-                    {/* إضافة flex-grow لتوسيع المساحة */}
                     <p className="font-inter text-[14px] font-semibold leading-[22px] text-left text-blackButton">
                       {item.name}
                     </p>
@@ -64,8 +76,6 @@ const FlyoutCart = () => {
                     <QuantityButtonSmall />
                   </div>
                   <div className="flex flex-col items-end h-full justify-between">
-                    {" "}
-                    {/* جعل السعر وزر الإغلاق في النهاية */}
                     <p className="font-inter text-[14px] font-semibold leading-[22px] text-right">
                       ${item.price.toFixed(2)}
                     </p>

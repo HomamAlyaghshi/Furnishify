@@ -1,18 +1,26 @@
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { StarIcon as OutlineStar } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStar } from "@heroicons/react/24/solid";
+import TimeDisplay from "./TimeDisplay"; // تأكد من مسار الاستيراد الصحيح
 
 const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
   const [selectedStars, setSelectedStars] = useState(5);
+  const [time, setTime] = useState({
+    days: 2,
+    hours: 12,
+    minutes: 45,
+    seconds: 5,
+  });
+
   const handleStarClick = (index) => {
     setSelectedStars(index + 1);
   };
 
   return (
-    <div className=" w-full h-[1042px] pt-[16px]">
-      {/* الشريط يلي فوق تبع الازرار بس ع شكل سيت ستيت */}
+    <div className="w-full h-[1042px] pt-[16px]">
+      {/* شريط التنقل */}
       <div className="h-[24px] w-[466px] flex gap-[16px] bg-white justify-end">
         {buttonTexts.map((text, index) => (
           <div key={index} className="flex items-center">
@@ -26,11 +34,11 @@ const ProductLoop = () => {
         ))}
       </div>
 
-      <div className=" h-[986px] flex justify-around gap-[24px] px[160px]">
-        <div className=" w-[549px] h-[919px] grid -mr-60">
+      <div className="h-[986px] mt-[16px] flex justify-around gap-[24px] px[160px]">
+        <div className="w-[549px] h-[919px] grid -mr-60">
           <img
             src="/images/cart1-big.png"
-            alt=" cart1-big"
+            alt="cart1-big"
             className="h-[729px] w-[548px] -mr-60"
           />
           <div className="flex justify-between">
@@ -39,10 +47,11 @@ const ProductLoop = () => {
             <img alt="4" src="/images/cart4-big.png" />
           </div>
         </div>
-        <div className=" w-[508px] h-[986px]">
-          <div className=" h-[706px] w-full">
-            <div className="h-[248px]  grid gap-[16px] items-start justify-start">
-              <div className="flex  ">
+
+        <div className="w-[508px] h-[986px]">
+          <div className="h-[706px] w-full">
+            <div className="h-[248px] grid gap-[16px] items-start justify-start">
+              <div className="flex">
                 {Array.from({ length: 5 }, (_, index) => (
                   <div
                     className="mt-[4px]"
@@ -62,10 +71,8 @@ const ProductLoop = () => {
                 Tray Table
               </h1>
               <p className="font-inter text-[16px] font-normal leading-[26px] text-left w-[508px] h-[78px] text-blackButton_50">
-                Buy one or buy a few and make every space where you sit more{" "}
-                <br />
+                Buy one or buy a few and make every space where you sit more
                 convenient. Light and easy to move around with removable tray
-                <br />
                 top, handy for serving snacks.
               </p>
               <div className="flex w-[508px] h-[34px] gap-[12px] justify-start">
@@ -78,62 +85,64 @@ const ProductLoop = () => {
               </div>
             </div>
 
-            <div className="h-[166px] bg-orange-600 grid items-center border-y-[1px] border-b-blackButton_50">
-              <div className="bg-orange-300 w-[360px] h-[118px] gap-[12px] grid">
-                <div className="bg-orange-200 w-[360px] h-[26px] font-inter text-[16px] font-normal leading-[26px] text-left">
-                  {" "}
+            <div className="h-[166px] grid items-center border-y-[1px] border-b-blackButton_50">
+              <div className="w-[360px] h-[118px] gap-[12px] grid">
+                <div className="w-[360px] h-[26px] font-inter text-[16px] font-normal leading-[26px] text-left">
                   Offer expires in:
                 </div>
-                <div className="bg-yellow-200 w-[288px] h-[80px] gap-[16px] flex">
-                  <div className="w-[60px] h-[80px] bg-red-400 grid">
-                    <div className="w-[60px] h-[80px] bg-slate-200 flex justify-center items-center">
-                      <p className="w-[41px] h-[38px] top-[11px] left-[10px] font-poppins text-[34px] font-medium leading-[38px] tracking-[-0.6px] text-center">
-                        02
-                      </p>
-                    </div>
-                    <p className="text-blackButton_50 flex justify-center items-center font-inter text-[12px] font-normal leading-[20px] text-center">
-                      {" "}
-                      Days
-                    </p>
-                  </div>
-                  <div className="w-[60px] h-[80px] bg-red-400 grid">
-                    <div className="w-[60px] h-[80px] bg-slate-200 flex justify-center items-center">
-                      <p className="w-[41px] h-[38px] top-[11px] left-[10px] font-poppins text-[34px] font-medium leading-[38px] tracking-[-0.6px] text-center">
-                        12
-                      </p>
-                    </div>
-                    <p className="text-blackButton_50 flex justify-center items-center font-inter text-[12px] font-normal leading-[20px] text-center">
-                      {" "}
-                      Hours
-                    </p>
-                  </div>
-                  <div className="w-[60px] h-[80px] bg-red-400 grid">
-                    <div className="w-[60px] h-[80px] bg-slate-200 flex justify-center items-center">
-                      <p className="w-[41px] h-[38px] top-[11px] left-[10px] font-poppins text-[34px] font-medium leading-[38px] tracking-[-0.6px] text-center">
-                        45
-                      </p>
-                    </div>
-                    <p className="text-blackButton_50 flex justify-center items-center font-inter text-[12px] font-normal leading-[20px] text-center">
-                      {" "}
-                      Minutes
-                    </p>
-                  </div>
-                  <div className="w-[60px] h-[80px] bg-red-400 grid">
-                    <div className="w-[60px] h-[80px] bg-slate-200 flex justify-center items-center">
-                      <p className="w-[41px] h-[38px] top-[11px] left-[10px] font-poppins text-[34px] font-medium leading-[38px] tracking-[-0.6px] text-center">
-                        05
-                      </p>
-                    </div>
-                    <p className="text-blackButton_50 flex justify-center items-center font-inter text-[12px] font-normal leading-[20px] text-center">
-                      {" "}
-                      Seconds
-                    </p>
-                  </div>
+
+                <div className="w-[288px] h-[80px] gap-[16px] flex">
+                  {/**هاد الكومبوننت يلي بيعرض الرقم وتحتو الاسم */}
+                  <TimeDisplay label="Days" value={time.days} />
+                  <TimeDisplay label="Hours" value={time.hours} />
+                  <TimeDisplay label="Minutes" value={time.minutes} />
+                  <TimeDisplay label="Seconds" value={time.seconds} />
                 </div>
               </div>
             </div>
 
-            <div className="h-[292px] w-[334px] bg-orange-900"></div>
+            <div className="h-[292px] w-[334px] ">
+              <div className="w-[144px] h-[66px] gap-2 grid mt-[30px]">
+                <p className="text-blackButton_50 font-inter text-[20px] font-normal leading-[32px] text-left">
+                  Measurements
+                </p>
+                <p className="text-blackButton font-inter text-[16px] font-semibold leading-[26px] text-left">
+                  17 1/2x20 5/8 "
+                </p>
+              </div>
+              <div className="w-[334px] h-[154px] gap-4 grid mt-[40px] ">
+                <div className="w-[134px] h-[66px] gap-[16pxS] grid  ">
+                  <p className="font-inter text-[16px] font-semibold leading-[26px] text-left text-blackButton_50">
+                    Choose Color
+                  </p>
+                  <p className="font-inter text-[20px] font-normal leading-[32px] text-left text-blackButton">
+                    Black
+                  </p>
+                </div>
+                <div className="w-[334px] h-[72px] gap-4 flex">
+                  <img
+                    alt=""
+                    src="/images/cart1.png"
+                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                  />
+                  <img
+                    alt=""
+                    src="/images/cart1.png"
+                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                  />
+                  <img
+                    alt=""
+                    src="/images/cart1.png"
+                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                  />
+                  <img
+                    alt=""
+                    src="/images/cart1.png"
+                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="bg-yellow-600 h-[184px] w-full grid gap-[16px] py-[32px]">
             <div className="bg-lime-300 h-[52px] flex gap-[24px]"></div>

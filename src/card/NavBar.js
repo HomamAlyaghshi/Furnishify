@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   MagnifyingGlassIcon,
   UserCircleIcon,
@@ -19,15 +20,21 @@ const NavBar = () => {
         3legant.
       </div>
       <div className="w-[324px] h-[24px] flex gap-[40px] ">
-        <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
-          Home
-        </button>
+        <Link to="/homepage">
+          {" "}
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+            Home
+          </button>
+        </Link>
         <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
           Shop
         </button>
-        <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
-          Product
-        </button>
+        <Link to="/productpage">
+          {" "}
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+            Product
+          </button>
+        </Link>
         <button className="w-[76px] grid gap-[2px] text-blackButton_50 font-medium whitespace-nowrap hover:text-blackButton">
           Contact Us
         </button>

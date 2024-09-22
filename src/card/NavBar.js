@@ -14,8 +14,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="w-[1440px] h-[60px] px-[160px] py-[16px] flex justify-between ">
-      <div className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] gap-0 font-bold">
+    <div className="w-full h-[60px] px-[160px] py-[16px] flex justify-between ">
+      <div className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] gap-0 font-bold text-blackButton">
         3legant.
       </div>
       <div className="w-[324px] h-[24px] flex gap-[40px] ">

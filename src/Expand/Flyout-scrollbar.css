@@ -1,14 +1,12 @@
 /* لتعديل خصائص الشريط */
 #custom-slider::-webkit-scrollbar {
-    height: 4px; /* فقط تحديد ارتفاع الشريط */
-
+    width: 4px; /* تحديد عرض الشريط */
   }
   
   #custom-slider::-webkit-scrollbar-thumb {
     background-color: #343839; /* لون الشريط */
-    border-radius: 80px 80px 80px 80px; /* نصف القطر */
+    border-radius: 80px; /* نصف القطر */
     opacity: 1; /* الشفافية */
-
   }
   
   #custom-slider::-webkit-scrollbar-track {
@@ -17,4 +15,5 @@
   
   #custom-slider {
     overflow-y: auto; /* إظهار الشريط العمودي */
-    overflow-x: auto; /* إخفاء الشريط الأفقي */ }
+    overflow-x: hidden; /* إخفاء الشريط الأفقي */
+  }

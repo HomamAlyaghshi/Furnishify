@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Flyout-scrollbar.css";
+import AddCart from "./AddCart";
 
 import QuantityButtonSmall from "./QuantityButtonSmall";
 
@@ -153,9 +154,7 @@ const FlyoutCart = ({ onClose }) => {
                   .toFixed(2)}
               </div>
             </div>
-            <button className="mt-4 bg-blackButton text-white py-2 rounded w-full">
-              Checkout
-            </button>
+            <AddCart label="Checkout" width="365px" height="52px" />
           </div>
         )}
       </div>

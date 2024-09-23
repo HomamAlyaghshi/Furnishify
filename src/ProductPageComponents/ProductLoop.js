@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import { StarIcon as OutlineStar } from "@heroicons/react/24/outline";
 import { StarIcon as SolidStar } from "@heroicons/react/24/solid";
-import TimeDisplay from "./TimeDisplay"; // تأكد من مسار الاستيراد الصحيح
+import TimeDisplay from "./TimeDisplay";
+import ProductButton from "../Expand/ProductButton";
+import WishlistButton from "../Expand/WishlistButton";
+import AddCart from "../Expand/AddCart";
 
 const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
@@ -144,11 +147,25 @@ const ProductLoop = () => {
               </div>
             </div>
           </div>
-          <div className="bg-yellow-600 h-[184px] w-full grid gap-[16px] py-[32px]">
-            <div className="bg-lime-300 h-[52px] flex gap-[24px]"></div>
-            <div className="bg-lime-900 h-[52px]">2</div>
+          <div className=" h-[184px] w-full grid gap-[16px] py-[32px] border-b-[1px] border-b-background_50">
+            <div className="h-[52px] flex gap-[24px] justify-between">
+              <ProductButton />
+              <WishlistButton />
+            </div>
+            <AddCart label="Add to Cart" width="508px" height="52px" />
           </div>
-          <div className="bg-yellow-900 h-[96px] w-full">3</div>
+          <div className="h-[96px] w-full grid justify-start items-center ">
+            <div className="w-[147px] flex gap-[98px] font-inter text-[12px] font-normal leading-[20px] text-left grid-cols-1">
+              <p className="text-blackButton_50">SKU</p>
+              <p className="text-blackButton">1117</p>
+            </div>
+            <div className="w-[147px] flex gap-[98px] font-inter text-[12px] font-normal leading-[20px] text-left grid-cols-2 mb-[25px]">
+              <p className="text-blackButton_50">CATEGORY</p>
+              <p className="text-blackButton whitespace-nowrap -ml-[35px]  ">
+                Living Room, Bedroom
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

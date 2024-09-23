@@ -26,9 +26,12 @@ const NavBar = () => {
             Home
           </button>
         </Link>
-        <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
-          Shop
-        </button>
+        <Link to="/shoppage">
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+            Shop
+          </button>
+        </Link>
+
         <Link to="/productpage">
           {" "}
           <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">

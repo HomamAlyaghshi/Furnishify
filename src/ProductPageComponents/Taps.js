@@ -50,7 +50,9 @@ const Taps = () => {
               <option value="top-rated">Top Rated</option>
             </select>
           </div>
-          {/**comments */}
+          {/**comments
+           * قم بتمرير سورس الصورة والاسم والتيكست فقط
+           */}
           <div className="h-[1160px] w-full  grid gap-[24px]">
             <ReviewCart
               imageSrc="/images/profile1.png"

@@ -7,6 +7,7 @@ import {
   StarIcon as SolidStar,
   HeartIcon as SolidHeart,
 } from "@heroicons/react/24/solid";
+import StarsDisplay from "../ProductPageComponents/StarsDisplay";
 
 const CardProduct = ({ image, name, price, oldPrice }) => {
   const [selectedStars, setSelectedStars] = useState(5);
@@ -55,17 +56,9 @@ const CardProduct = ({ image, name, price, oldPrice }) => {
       {/* Content here */}
       <div className="h-[72px] mt-[12px]">
         <div className="h-[16px] w-[88px] flex gap-[2px]">
-          {Array.from({ length: 5 }, (_, index) => (
-            <div key={index} onClick={() => handleStarClick(index)}>
-              {index < selectedStars ? (
-                <SolidStar className="w-[16px] h-[16px] text-blackButton" />
-              ) : (
-                <OutlineStar className="w-[16px] h-[16px] text-blackButton_50" />
-              )}
-            </div>
-          ))}
+          <StarsDisplay />
         </div>
-        <div>{name}</div>
+        <div className="mt-[6px]">{name}</div>
         <div className="flex">
           <div className="text-blackButton">{price}</div>
           {oldPrice && (

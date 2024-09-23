@@ -13,6 +13,7 @@ module.exports = {
         background_50: "#F3F5F7",
         kiwi: "#38CB89",
         blue: "#377DFF",
+        para: "#353945",
       },
     },
   },

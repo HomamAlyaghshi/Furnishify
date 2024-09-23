@@ -1,25 +1,20 @@
 import React, { useState } from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
-import { StarIcon as OutlineStar } from "@heroicons/react/24/outline";
-import { StarIcon as SolidStar } from "@heroicons/react/24/solid";
+
 import TimeDisplay from "./TimeDisplay";
 import ProductButton from "../Expand/ProductButton";
 import WishlistButton from "../Expand/WishlistButton";
 import AddCart from "../Expand/AddCart";
+import StarsDisplay from "./StarsDisplay";
 
 const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
-  const [selectedStars, setSelectedStars] = useState(5);
   const [time] = useState({
     days: 2,
     hours: 12,
     minutes: 45,
     seconds: 5,
   });
-
-  const handleStarClick = (index) => {
-    setSelectedStars(index + 1);
-  };
 
   return (
     <div className="w-full h-[1042px] pt-[16px]">
@@ -55,19 +50,7 @@ const ProductLoop = () => {
           <div className="h-[706px] w-full">
             <div className="h-[248px] grid gap-[16px] items-start justify-start">
               <div className="flex">
-                {Array.from({ length: 5 }, (_, index) => (
-                  <div
-                    className="mt-[4px]"
-                    key={index}
-                    onClick={() => handleStarClick(index)}
-                  >
-                    {index < selectedStars ? (
-                      <SolidStar className="w-[16px] h-[16px] text-blackButton" />
-                    ) : (
-                      <OutlineStar className="w-[16px] h-[16px] text-blackButton_50" />
-                    )}
-                  </div>
-                ))}
+                <StarsDisplay />
                 <div className="ml-[10px]">11 Reviews</div>
               </div>
               <h1 className="font-poppins text-[40px] font-medium leading-[44px] tracking-[-0.4px] text-left w-[208px] h-[44px] text-blackButton">

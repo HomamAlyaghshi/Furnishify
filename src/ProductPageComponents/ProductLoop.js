@@ -10,7 +10,7 @@ import AddCart from "../Expand/AddCart";
 const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
   const [selectedStars, setSelectedStars] = useState(5);
-  const [time, setTime] = useState({
+  const [time] = useState({
     days: 2,
     hours: 12,
     minutes: 45,

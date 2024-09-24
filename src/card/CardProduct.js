@@ -22,7 +22,7 @@ const CardProduct = ({ image, name, price, oldPrice }) => {
   };
 
   return (
-    <div className="w-[262px] h-[433px] bg-white relative group inline-block mr-4">
+    <div className="w-[262px] h-[433px] bg-white relative group inline-block mr-[16px] ">
       {/* Overlay for title */}
       <div className="absolute top-2 left-2  p-1 w-[71px] h-[56px] rounded-[4px] grid gap-[8px] ">
         <div className="w-[67px] h-[24px] bg-white flex justify-center items-center font-inter text-[16px] font-bold leading-[16px] text-center">

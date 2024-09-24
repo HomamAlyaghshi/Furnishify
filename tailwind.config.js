@@ -14,6 +14,7 @@ module.exports = {
         kiwi: "#38CB89",
         blue: "#377DFF",
         para: "#353945",
+        1212: "#121212",
       },
     },
   },

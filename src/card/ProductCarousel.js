@@ -18,7 +18,10 @@ const ProductCarousel = () => {
       </div>
 
       {/** الصور */}
-      <div className="flex overflow-x-auto no-scrollbar">
+      <div
+        id="custom-slider"
+        className="flex overflow-x-auto no-scrollbar mr-4  whitespace-nowrap"
+      >
         <ProductList />
       </div>
     </div>

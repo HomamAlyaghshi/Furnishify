@@ -7,7 +7,7 @@ import Newsletter from "../card/Newsletter";
 import Footer from "../card/Footer";
 const ShopPage = () => {
   return (
-    <div className="w-[1440px] h-[2808px] bg-orange-100">
+    <div className="w-[1440px] h-[2808px] ">
       <NotificationBar />
       <NavBar />
       <PageHeader />

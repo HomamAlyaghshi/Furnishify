@@ -6,8 +6,8 @@ const Slider = () => {
 
   const slides = [
     { src: "/images/slider1.png", alt: "Slide 1" },
-    { src: "/images/slider2.png", alt: "Slide 2" },
-    { src: "/images/slider3.png", alt: "Slide 3" },
+    { src: "/images/slider1.png", alt: "Slide 2" },
+    { src: "/images/slider1.png", alt: "Slide 3" },
   ];
 
   const nextSlide = () => {

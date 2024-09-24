@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Flyout-scrollbar.css";
 import AddCart from "./AddCart";
+import { Link } from "react-router-dom";
 
 import QuantityButtonSmall from "./QuantityButtonSmall";
 
@@ -154,7 +155,9 @@ const FlyoutCart = ({ onClose }) => {
                   .toFixed(2)}
               </div>
             </div>
-            <AddCart label="Checkout" width="365px" height="52px" />
+            <Link to="/cartpage">
+              <AddCart label="Checkout" width="365px" height="52px" />
+            </Link>
           </div>
         )}
       </div>

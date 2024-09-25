@@ -9,7 +9,7 @@ const CartProduct = ({ image, productName, color, price, onRemove }) => {
   };
 
   const handleDecrease = () => {
-    setQuantity((prev) => (prev > 0 ? prev - 1 : 0)); // تأكد من عدم السقوط دون الصفر
+    setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
   };
 
   // حساب total price
@@ -29,7 +29,7 @@ const CartProduct = ({ image, productName, color, price, onRemove }) => {
           </p>
           <button
             className="font-inter text-[14px] font-semibold leading-[22px] text-left text-blackButton_50"
-            onClick={onRemove} // استدعاء دالة onRemove عند الضغط
+            onClick={onRemove}
           >
             X Remove
           </button>

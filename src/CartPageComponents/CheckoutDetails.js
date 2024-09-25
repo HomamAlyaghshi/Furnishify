@@ -1,19 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "../card/NavBar";
+import HeaderOfAllCart from "./HeaderOfAllCart";
 import Footer from "../card/Footer";
-
-import { Link } from "react-router-dom";
-import ShoppingCart from "../CartPageComponents/ShoppingCart";
-import HeaderOfAllCart from "../CartPageComponents/HeaderOfAllCart";
-
-const CartPage = () => {
+const CheckoutDetails = () => {
   return (
     <div className="w-[1440px] h-[1406px]">
       <NavBar />
       {/**Cart Section */}
       <div className="w-[1440px] h-[1097px] px-[160px] py-[80px]  grid place-items-center">
         <HeaderOfAllCart />
-        <ShoppingCart />
       </div>
 
       <Footer />
@@ -21,4 +16,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+export default CheckoutDetails;

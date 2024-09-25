@@ -6,7 +6,7 @@ const PageHeader = () => {
   const [buttonTexts] = useState(["Home", "Shop"]);
 
   return (
-    <div className="relative w-[1440px] h-[392px] px-[160px] ">
+    <div className="relative  h-[392px] px-[160px] ">
       <img
         alt="Header"
         src="/images/page-header.png"

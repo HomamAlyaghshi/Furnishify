@@ -17,7 +17,7 @@ const ProductLoop = () => {
   });
 
   return (
-    <div className="w-full h-[1042px] pt-[16px]">
+    <div className=" h-[1042px] pt-[16px]">
       {/* شريط التنقل */}
       <div className="h-[24px] w-[466px] flex gap-[16px] bg-white justify-end">
         {buttonTexts.map((text, index) => (

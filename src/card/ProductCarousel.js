@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const ProductCarousel = () => {
   return (
-    <div className="w-full max-w-[1440px] h-auto py-[48px] pl-[16px] sm:pl-[32px] md:pl-[160px] grid gap-[48px]">
+    <div className=" h-auto py-[48px] pl-[16px] sm:pl-[32px] md:pl-[160px] grid gap-[48px]">
       <div className="w-full max-w-[1120px] h-[88px] flex justify-between">
         <div className="w-[149px] h-[88px] font-poppins text-[32px] sm:text-[40px] font-medium leading-[44px] tracking-[-0.4px] text-left">
           New Arrivals

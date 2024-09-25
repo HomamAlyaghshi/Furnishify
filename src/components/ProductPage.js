@@ -7,9 +7,9 @@ import Newsletter from "../card/Newsletter";
 import Footer from "../card/Footer";
 const ProductPage = () => {
   return (
-    <div className="w-[1440px]">
+    <div className="w-full">
       <NotificationBar />
-      <div className="border-b-[1px] w-[1440px] text-blackButton_50">
+      <div className="border-b-[1px]  text-blackButton_50">
         <NavBar />
       </div>
       <ProductLoop />

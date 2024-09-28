@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Flyout-scrollbar.css";
 import AddCart from "./AddCart";
 import { Link } from "react-router-dom";
-
-import QuantityButtonSmall from "./QuantityButtonSmall";
+import CartProductItem from "./CartProductItem"; // استيراد المكون الجديد
 
 const FlyoutCart = ({ onClose }) => {
   const [cartItems, setCartItems] = useState([
@@ -33,12 +32,10 @@ const FlyoutCart = ({ onClose }) => {
     },
   ]);
 
-  // تابع لحذف عنصر من العربة
   const removeItem = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
-  // زيادة الكمية
   const increaseQuantity = (id) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -47,7 +44,6 @@ const FlyoutCart = ({ onClose }) => {
     );
   };
 
-  // تقليل الكمية
   const decreaseQuantity = (id) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -58,7 +54,6 @@ const FlyoutCart = ({ onClose }) => {
     );
   };
 
-  // إغلاق الكارت عند الضغط على Esc
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -81,7 +76,6 @@ const FlyoutCart = ({ onClose }) => {
             Cart
           </div>
 
-          {/* تحقق إذا كانت العربة تحتوي على عناصر */}
           {cartItems.length === 0 ? (
             <div className="text-center text-blackButton_50 text-[14px]">
               The cart is empty.
@@ -92,48 +86,18 @@ const FlyoutCart = ({ onClose }) => {
               className="overflow-y-auto overflow-x-hidden h-[480px] grid gap-[24px] pb-[160px]"
             >
               {cartItems.map((item) => (
-                <div
+                <CartProductItem
                   key={item.id}
-                  className="bg-white h-[144px] border-b-[1px] border-b-blackButton_50 flex items-center gap-[16px] p-2"
-                >
-                  <div className="flex gap-[10px] items-center w-full">
-                    <img
-                      alt={item.name}
-                      src={item.image}
-                      className="h-full w-[80px] object-contain"
-                    />
-                    <div className="flex flex-col justify-between h-full flex-grow">
-                      <p className="font-inter text-[14px] font-semibold leading-[22px] text-left text-blackButton">
-                        {item.name}
-                      </p>
-                      <p className="font-inter text-[12px] font-normal leading-[20px] text-left text-blackButton_50">
-                        Color: {item.color}
-                      </p>
-                      <QuantityButtonSmall
-                        quantity={item.quantity}
-                        onIncrease={() => increaseQuantity(item.id)}
-                        onDecrease={() => decreaseQuantity(item.id)}
-                      />
-                    </div>
-                    <div className="flex flex-col items-end h-full justify-between">
-                      <p className="font-inter text-[14px] font-semibold leading-[22px] text-right">
-                        ${(item.price * item.quantity).toFixed(2)}
-                      </p>
-                      <button
-                        className="text-blackButton_50 text-right"
-                        onClick={() => removeItem(item.id)}
-                      >
-                        X
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                  item={item}
+                  onIncrease={() => increaseQuantity(item.id)}
+                  onDecrease={() => decreaseQuantity(item.id)}
+                  onRemove={() => removeItem(item.id)}
+                />
               ))}
             </div>
           )}
         </div>
 
-        {/* القسم السفلي المحتوي على المجموع وزر Checkout */}
         {cartItems.length > 0 && (
           <div className="p-4 sticky bottom-0 bg-white">
             <div className="flex justify-between">

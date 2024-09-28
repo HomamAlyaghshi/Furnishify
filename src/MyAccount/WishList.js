@@ -1,6 +1,30 @@
 import React from "react";
-const WishLish = () => {
-  return <h1>WishLish</h1>;
+import NavBar from "../card/NavBar";
+import HeaderOfAllAccount from "./HeaderOfAllAccount";
+import Footer from "../card/Footer";
+import SideBar from "./SideBar";
+const WishList = () => {
+  return (
+    <div className="h-[1435px]   ">
+      <NavBar />
+      <div className="flex justify-center items-center">
+        <HeaderOfAllAccount />
+      </div>
+      <div className="grid justify-center items-center">
+        <div className="w-[1120px] h-[828px]  flex justify-between mb-16  ">
+          <SideBar />
+          {/**WishLish Section */}
+          <div className="w-[851px] h-[191px] p-[0px_72px] gap-[19px] grid ">
+            <p className="font-inter text-[20px] font-semibold leading-[32px]  text-left">
+              Your Wishlist
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
 };
 
-export default WishLish;
+export default WishList;

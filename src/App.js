@@ -10,6 +10,8 @@ import CheckoutDetails from "./CartPageComponents/CheckoutDetails";
 import OrderComplete from "./CartPageComponents/OrderComplete";
 import MyAccountPage from "./MyAccount/MyAccountPage";
 import Address from "./MyAccount/Address";
+import OrderHistory from "./MyAccount/OrderHistory";
+import WishList from "./MyAccount/WishList";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/test" element={<Test />} />
         <Route path="/accountpage" element={<MyAccountPage />} />
         <Route path="/account-addresspage" element={<Address />} />
+        <Route path="/account-orderpage" element={<OrderHistory />} />
+        <Route path="/address-wishlishpage" element={<WishList />} />
       </Routes>
     </Router>
   );

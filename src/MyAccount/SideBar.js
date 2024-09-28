@@ -23,15 +23,21 @@ const SideBar = () => {
             Address
           </button>
         </Link>
-        <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
-          Orders
-        </button>
-        <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
-          Wishlist
-        </button>
-        <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
-          Log Out
-        </button>
+        <Link to={"/account-orderpage"}>
+          <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
+            Orders
+          </button>
+        </Link>
+        <Link to={"/address-wishlishpage"}>
+          <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
+            Wishlist
+          </button>
+        </Link>
+        <Link to={"/"}>
+          <button className="hover:border-b-[1px]   hover:border-b-blackButton_50 text-blackButton_50 hover:text-blackButton">
+            Log Out
+          </button>
+        </Link>
       </div>
     </div>
   );

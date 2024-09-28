@@ -1,10 +1,9 @@
 import React from "react";
 
-const Input = ({ labelText, placeholder }) => {
+const Input = ({ labelText, placeholder, width }) => {
   return (
-    <div className="h-full w-full">
-      {" "}
-      <label className="form-control w-full max-w-xs">
+    <div className="h-auto w-full">
+      <label className="form-control" style={{ width: width }}>
         <div className="label">
           <span className="label-text font-inter text-[12px] font-bold leading-[12px] text-left">
             {labelText}
@@ -13,7 +12,7 @@ const Input = ({ labelText, placeholder }) => {
         <input
           type="text"
           placeholder={placeholder}
-          className="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full"
         />
       </label>
     </div>

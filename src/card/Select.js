@@ -7,9 +7,10 @@ const Select = ({
   thiedOption,
   fourthOption,
   fifthOption,
+  width,
 }) => {
   return (
-    <label className="form-control w-full max-w-xs">
+    <label className="form-control" style={{ width: width }}>
       <div className="label">
         <span className="label-text">{labelText}</span>
       </div>

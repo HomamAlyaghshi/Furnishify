@@ -9,6 +9,7 @@ import Test from "./Test";
 import CheckoutDetails from "./CartPageComponents/CheckoutDetails";
 import OrderComplete from "./CartPageComponents/OrderComplete";
 import MyAccountPage from "./MyAccount/MyAccountPage";
+import Address from "./MyAccount/Address";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/order-complete" element={<OrderComplete />} />
         <Route path="/test" element={<Test />} />
         <Route path="/accountpage" element={<MyAccountPage />} />
+        <Route path="/account-addresspage" element={<Address />} />
       </Routes>
     </Router>
   );

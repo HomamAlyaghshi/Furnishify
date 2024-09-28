@@ -6,7 +6,7 @@ const HeaderOfAllCart = () => {
   const location = useLocation(); // استخدام useLocation للحصول على المسار الحالي
 
   // إنشاء حالة للتحكم في الرقم واسم الزر
-  const [processItems, setProcessItems] = useState([
+  const [processItems] = useState([
     { number: 1, buttonText: "Shopping cart", link: "/cartpage" },
     { number: 2, buttonText: "Checkout details", link: "/checkout-details" },
     { number: 3, buttonText: "Order complete", link: "/order-complete" },

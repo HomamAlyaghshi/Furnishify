@@ -44,7 +44,12 @@ const NavBar = () => {
       </div>
       <div className="w-[130px] h-[28px] flex gap-[16px] ">
         <MagnifyingGlassIcon className="w-6 h-6 text-blackButton" />
-        <UserCircleIcon className="w-6 h-6 text-blackButton" />
+        <Link to={"/accountpage"}>
+          <button>
+            <UserCircleIcon className="w-6 h-6 text-blackButton" />
+          </button>
+        </Link>
+
         <div className="flex gap-[4px] ">
           <button onClick={toggleCart}>
             <ShoppingBagIcon className="w-6 h-6 text-blackButton" />

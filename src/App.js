@@ -8,6 +8,7 @@ import CartPage from "./components/CartPage";
 import Test from "./Test";
 import CheckoutDetails from "./CartPageComponents/CheckoutDetails";
 import OrderComplete from "./CartPageComponents/OrderComplete";
+import MyAccountPage from "./MyAccount/MyAccountPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/checkout-details" element={<CheckoutDetails />} />
         <Route path="/order-complete" element={<OrderComplete />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/accountpage" element={<MyAccountPage />} />
       </Routes>
     </Router>
   );

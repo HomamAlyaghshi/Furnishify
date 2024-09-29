@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const BlogSection = () => {
   const [blogPosts, setBlogPosts] = useState([
@@ -27,10 +28,12 @@ const BlogSection = () => {
           Articles
         </div>
         <div className="flex border-b-[1px] border-blackButton items-center mt-4 md:mt-0">
-          <button className="flex items-center whitespace-nowrap pb-1 text-[16px] md:text-[18px]">
-            More Articles
-            <ArrowRightIcon className="ml-2 w-4 h-4 md:w-5 md:h-5" />
-          </button>
+          <Link to={"/blogpage"}>
+            <button className="flex items-center whitespace-nowrap pb-1 text-[16px] md:text-[18px]">
+              More Articles
+              <ArrowRightIcon className="ml-2 w-4 h-4 md:w-5 md:h-5" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="h-auto w-full md:w-[1121px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[24px] px-4 md:px-0">

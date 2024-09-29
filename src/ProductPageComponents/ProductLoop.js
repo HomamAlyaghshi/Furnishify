@@ -6,15 +6,10 @@ import ProductButton from "../Expand/ProductButton";
 import WishlistButton from "../Expand/WishlistButton";
 import AddCart from "../Expand/AddCart";
 import StarsDisplay from "./StarsDisplay";
+import CountDownn from "../card/CountDown";
 
 const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
-  const [time] = useState({
-    days: 2,
-    hours: 12,
-    minutes: 45,
-    seconds: 5,
-  });
 
   return (
     <div className=" h-[1042px] pt-[16px]">
@@ -78,11 +73,7 @@ const ProductLoop = () => {
                 </div>
 
                 <div className="w-[288px] h-[80px] gap-[16px] flex">
-                  {/**هاد الكومبوننت يلي بيعرض الرقم وتحتو الاسم */}
-                  <TimeDisplay label="Days" value={time.days} />
-                  <TimeDisplay label="Hours" value={time.hours} />
-                  <TimeDisplay label="Minutes" value={time.minutes} />
-                  <TimeDisplay label="Seconds" value={time.seconds} />
+                  <CountDownn />
                 </div>
               </div>
             </div>

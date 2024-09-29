@@ -12,6 +12,7 @@ import MyAccountPage from "./MyAccount/MyAccountPage";
 import Address from "./MyAccount/Address";
 import OrderHistory from "./MyAccount/OrderHistory";
 import WishList from "./MyAccount/WishList";
+import BlogPage from "./BlogComponents/BlogPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/account-addresspage" element={<Address />} />
         <Route path="/account-orderpage" element={<OrderHistory />} />
         <Route path="/address-wishlishpage" element={<WishList />} />
+        <Route path="/blogpage" element={<BlogPage />} />
       </Routes>
     </Router>
   );

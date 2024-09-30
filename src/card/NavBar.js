@@ -38,9 +38,11 @@ const NavBar = () => {
             Product
           </button>
         </Link>
-        <button className="w-[76px] grid gap-[2px] text-blackButton_50 font-medium whitespace-nowrap hover:text-blackButton">
-          Contact Us
-        </button>
+        <Link to={"/contactuspage"}>
+          <button className="w-[76px] grid gap-[2px] text-blackButton_50 font-medium whitespace-nowrap hover:text-blackButton">
+            Contact Us
+          </button>
+        </Link>
       </div>
       <div className="w-[130px] h-[28px] flex gap-[16px] ">
         <MagnifyingGlassIcon className="w-6 h-6 text-blackButton" />

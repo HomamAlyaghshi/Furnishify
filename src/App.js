@@ -13,6 +13,7 @@ import Address from "./MyAccount/Address";
 import OrderHistory from "./MyAccount/OrderHistory";
 import WishList from "./MyAccount/WishList";
 import BlogPage from "./BlogComponents/BlogPage";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/account-orderpage" element={<OrderHistory />} />
         <Route path="/address-wishlishpage" element={<WishList />} />
         <Route path="/blogpage" element={<BlogPage />} />
+        <Route path="/contactuspage" element={<ContactUs />} />
       </Routes>
     </Router>
   );

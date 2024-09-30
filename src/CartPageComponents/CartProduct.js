@@ -1,16 +1,21 @@
-import React, { useState } from "react";
 import QuantityButtonSmall from "../Expand/QuantityButtonSmall";
+import useCartStore from "../store/cartStore";
 
-const CartProduct = ({ image, productName, color, price, onRemove }) => {
-  const [quantity, setQuantity] = useState(0);
-
+const CartProduct = ({ image, productName, color, price, onRemove, id }) => {
+  // دالة زيادة ونقصان العنصر
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const handleIncrease = () => {
-    setQuantity((prev) => prev + 1);
+    increaseQuantity(id); // تمرير id هنا
   };
 
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const handleDecrease = () => {
-    setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+    decreaseQuantity(id); // تمرير id هنا
   };
+
+  const cartItems = useCartStore((state) => state.cartItems);
+  const currentItem = cartItems.find((item) => item.id === id);
+  const quantity = currentItem ? currentItem.quantity : 1; // افتراض 1 إذا لم يتم العثور على المنتج
 
   // حساب total price
   const totalPrice = quantity * price;

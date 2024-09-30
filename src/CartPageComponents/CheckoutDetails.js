@@ -8,68 +8,36 @@ import Select from "../card/Select";
 import Radios from "../card/Radios";
 import { EyeIcon } from "@heroicons/react/16/solid";
 import CartProductItem from "../Expand/CartProductItem";
-import { useState } from "react";
+import useCartStore from "../store/cartStore";
 
-const CheckoutDetails = () => {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Tray Table",
-      color: "Black",
-      price: 19.23,
-      image: "/images/cart1.png",
-      quantity: 1,
-    },
-    {
-      id: 2,
-      name: "Chair",
-      color: "Red",
-      price: 29.99,
-      image: "/images/cart1.png",
-      quantity: 1,
-    },
-    {
-      id: 3,
-      name: "Sofa",
-      color: "Blue",
-      price: 99.99,
-      image: "/images/cart1.png",
-      quantity: 1,
-    },
-  ]);
-  const removeItem = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+const CheckoutDetails = ({ id }) => {
+  const cartItems = useCartStore((state) => state.cartItems); // سحب عناصر السلة
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const calculateSubtotal = useCartStore((state) => state.calculateSubtotal);
+  const handleIncrease = (id) => {
+    increaseQuantity(id); // تمرير id هنا
+  };
+  const handleDecrease = (id) => {
+    decreaseQuantity(id);
+  };
+  const handleRemove = (id) => {
+    removeFromCart(id);
   };
 
-  const increaseQuantity = (id) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
-      )
-    );
-  };
-
-  const decreaseQuantity = (id) => {
-    setCartItems((prevItems) =>
-      prevItems.map((item) =>
-        item.id === id && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );
-  };
   return (
-    <div className=" h-[1406px]">
+    <div className="h-[1406px]">
       <NavBar />
       {/**Cart Section */}
-      <div className=" h-[1958px] px-[160px] py-[80px]  grid place-items-center justify-center">
+      <div className="h-[1958px] px-[160px] py-[80px] grid place-items-center justify-center">
         <HeaderOfAllCart />
-        <div className="w-[1120px] h-[1634px] flex justify-between ">
-          <div className=" h-[1474px] w-[643px] grid  gap-[24px] ">
+        <div className="w-[1120px] h-[1634px] flex justify-between">
+          <div className="h-[1474px] w-[643px] grid gap-[24px]">
             {/**Form */}
-            <div className="w-full h-[372px] py-[40px] px-[24px]  border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
-              <p className="text-black text-[20px]">Contact Infomation</p>
-              <div className="w-[595px] h-[64px] justify-between  flex gap-[12px]">
+            <div className="w-full h-[372px] py-[40px] px-[24px] border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
+              <p className="text-black text-[20px]">Contact Information</p>
+              <div className="w-[595px] h-[64px] justify-between flex gap-[12px]">
                 <Input labelText={"FIRST NAME"} placeholder={"First name"} />
                 <Input labelText={"LAST NAME"} placeholder={"Last name"} />
               </div>
@@ -77,7 +45,7 @@ const CheckoutDetails = () => {
               <Input labelText={"EMAIL ADDRESS"} placeholder={"Your Email"} />
             </div>
             {/**Form 2 */}
-            <div className="w-full h-[545px] py-[40px] px-[24px]  border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
+            <div className="w-full h-[545px] py-[40px] px-[24px] border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
               <p className="font-poppins text-[20px] font-medium leading-[28px] text-left">
                 Shipping Address
               </p>
@@ -109,11 +77,10 @@ const CheckoutDetails = () => {
               </div>
             </div>
             {/**Form 3 */}
-
-            <div className="w-full h-[468px] py-[40px] px-[24px]  grid gap-[24px] border-[1px] border-blackButton_50 rounded-[4px]">
+            <div className="w-full h-[468px] py-[40px] px-[24px] grid gap-[24px] border-[1px] border-blackButton_50 rounded-[4px]">
               <h1 className="text-[20px] text-blackButton">Payment method</h1>
-              <div className="w-[595px] h-[336px] gap-[24px]   grid ">
-                <div className="grid w-full  ">
+              <div className="w-[595px] h-[336px] gap-[24px] grid">
+                <div className="grid w-full">
                   <div className="w-[595px] h-[52px] border-[1px] border-blackButton rounded-[4px] flex items-center justify-between bg-white gap-[12px]">
                     <div className="flex gap-4 ml-4">
                       <Radios />
@@ -146,16 +113,16 @@ const CheckoutDetails = () => {
             <AddCart label={"Place Order"} width={"643px"} height={"52px"} />
           </div>
           {/*Order Summary */}
-          <div className=" w-[413px] h-[862px] p-[16px_24px] grid gap-[16px] rounded-[6px] border-blackButton_50  border-[1px] ">
+          <div className="w-[413px] h-[862px] p-[16px_24px] grid gap-[16px] rounded-[6px] border-blackButton_50 border-[1px]">
             <p className="text-[28px] text-blackButton">Order summary</p>
             <div>
               {cartItems.map((item) => (
                 <CartProductItem
                   key={item.id}
                   item={item}
-                  onIncrease={() => increaseQuantity(item.id)}
-                  onDecrease={() => decreaseQuantity(item.id)}
-                  onRemove={() => removeItem(item.id)}
+                  onIncrease={() => handleIncrease(item.id)}
+                  onDecrease={() => handleDecrease(item.id)}
+                  onRemove={() => handleRemove(item.id)}
                 />
               ))}
             </div>

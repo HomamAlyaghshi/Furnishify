@@ -51,6 +51,24 @@ const useCartStore = create((set) => ({
   clearCart: () => set({ cartItems: [] }),
   openCart: () => set({ isCartOpen: true }),
   closeCart: () => set({ isCartOpen: false }),
+
+  // دالة لحساب الـ Subtotal
+  calculateSubtotal: () =>
+    set((state) => ({
+      subtotal: state.cartItems.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+      ),
+    })),
+
+  // دالة لحفظ الـ Subtotal في الحالة
+  updateSubtotal: () =>
+    set((state) => ({
+      subtotal: state.cartItems.reduce(
+        (acc, item) => acc + item.price * item.quantity,
+        0
+      ),
+    })),
 }));
 
 export default useCartStore;

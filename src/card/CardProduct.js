@@ -4,14 +4,17 @@ import { HeartIcon as OutlineHeart } from "@heroicons/react/24/outline";
 import { HeartIcon as SolidHeart } from "@heroicons/react/24/solid";
 import StarsDisplay from "../ProductPageComponents/StarsDisplay";
 import useCartStore from "../store/cartStore";
+import useWishListStore from "../store/wishlistStore";
 
 const CardProduct = ({ id, image, name, price, oldPrice }) => {
   const [isFavorite, setIsFavorite] = useState(false);
-  const addToCart = useCartStore((state) => state.addToCart); // استخدام المتجر
-  const openCart = useCartStore((state) => state.openCart);
+  const addToCart = useCartStore((state) => state.addToCart); //  استخدام المتجر تبع المنتجات مشان الاضافة للسلة
+  const openCart = useCartStore((state) => state.openCart); //استخدام المتجر مشان حالة الفتح او اغلاق
+  const addToWishList = useWishListStore((state) => state.addToWishList);
 
   const handleFavoriteToggle = () => {
     setIsFavorite((prev) => !prev);
+    addToWishList(id);
   };
 
   const handleAddToCart = () => {

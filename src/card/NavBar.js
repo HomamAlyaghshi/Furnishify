@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import useCartStore from "../store/cartStore";
 import {
   MagnifyingGlassIcon,
   UserCircleIcon,
@@ -8,6 +9,13 @@ import {
 import FlyoutCart from "./../Expand/FlyoutCart";
 
 const NavBar = () => {
+  const cartItems = useCartStore((state) => state.cartItems);
+  // حساب إجمالي الكمية
+  const totalQuantity = cartItems.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleCart = () => {
@@ -57,7 +65,7 @@ const NavBar = () => {
             <ShoppingBagIcon className="w-6 h-6 text-blackButton" />
           </button>
           <div className="w-[20px] h-[20px] mt-1 bg-blackButton rounded-full text-white text-center flex justify-center items-center">
-            2
+            {totalQuantity}
           </div>
         </div>
       </div>

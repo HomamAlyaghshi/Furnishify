@@ -15,7 +15,7 @@ const CheckoutDetails = ({ id }) => {
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
-  const calculateSubtotal = useCartStore((state) => state.calculateSubtotal);
+
   const handleIncrease = (id) => {
     increaseQuantity(id); // تمرير id هنا
   };

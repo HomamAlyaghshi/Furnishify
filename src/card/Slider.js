@@ -21,7 +21,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="w-full max-w-[1440px] h-auto px-[16px] md:px-[160px] pb-[40px] mx-auto">
+    <div className="w-full max-w-[1440px] h-auto px-[16px] md:px-[160px] pb-[40px] mx-auto ">
       {/* Slider Wrapper */}
       <div className="relative w-full h-[536px] overflow-hidden">
         {/* Slides */}
@@ -69,11 +69,12 @@ const Slider = () => {
       </div>
 
       {/** النص الذي تحت الصور */}
-      <div className="w-full max-w-[1120px] flex justify-center items-center my-[24px]">
-        <div className="flex-1 bg-white w-[643px] h-[152px] font-poppins text-[72px] font-medium leading-[76px] tracking-[-2px] text-left">
-          Simply Unique/ Simply Better.
+      <div className="w-full max-w-[1120px] flex flex-col md:flex-row justify-center items-center my-[24px] mb-32">
+        <div className="flex-1 bg-white w-full md:w-[643px] h-auto font-poppins text-[32px] md:text-[72px] font-medium leading-[38px] md:leading-[76px] tracking-[-2px] text-left">
+          Simply Unique/ <br />
+          Simply Better.
         </div>
-        <div className="flex-1 bg-white text-blackButton_50 w-[453px] h-[52px] gap-[16px] font-inter text-[16px] font-normal leading-[26px] text-left">
+        <div className="flex-1 bg-white text-blackButton_50 w-full md:w-[453px] h-auto gap-[16px] font-inter text-[12px] md:text-[16px] font-normal leading-[20px] md:leading-[26px] text-left">
           <strong className="text-blackButton">3legant</strong> is a gift &
           decorations store based in HCMC,
           <br />

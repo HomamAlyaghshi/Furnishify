@@ -139,9 +139,9 @@ const ProductLoop = () => {
           </div>
 
           {/* قسم الأزرار */}
-          <div className="mt-6 border-b grid  border-b-background_50 py-8">
-            <div className="flex flex-col md:flex-row gap-6 justify-between">
-              <div className="flex gap-6">
+          <div className="mt-6 border-b grid border-b-background_50 py-8 w-full">
+            <div className="flex flex-col md:flex-row gap-6 justify-between w-full">
+              <div className="flex gap-6 w-full">
                 <ProductButton />
                 <WishlistButton />
               </div>

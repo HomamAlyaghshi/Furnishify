@@ -3,7 +3,7 @@ import StarsDisplay from "../ProductPageComponents/StarsDisplay";
 
 const ReviewCart = ({ imageSrc, name, reviewText }) => {
   return (
-    <div className="w-[450px] md:w-[1120px] py-4 border-b border-blackButton_50">
+    <div className="w-full md:w-[1120px]  py-4 border-b border-blackButton_50">
       {/* قسم الصورة والاسم والنجوم */}
       <div className="flex items-start gap-[20px] mb-2">
         <img

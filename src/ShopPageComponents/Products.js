@@ -6,7 +6,7 @@ const Products = () => {
   return (
     <div className="w-[834px] h-[1707px]  flex gap-[24px] pt-[60px] px-[160px] pb-[100px]">
       {/**SideBar */}
-      <div className="w-[262px] h-[582px] grid gap-[32px] ">
+      <div className="w-[262px] h-[582px] grid gap-[32px] hidden md:block ">
         <div className="w-full h-[32px] flex ga-[8px] text-1212 text-[20px] font-semibold leading-[32px] text-left">
           {/**TODO : Edit this icon */}
           <AdjustmentsHorizontalIcon />
@@ -78,7 +78,7 @@ const Products = () => {
         </div>
       </div>
       {/**Grid */}
-      <div className="w-[834px] h-[1547px] gap-[40px] grid ">
+      <div className="md:w-[834px] md:h-[1547px] gap-[40px]   ">
         <div className="flex justify-between w-full h-[40px] gap-[419px] ">
           <div className="w-[119px] h-[32px] text-black font-inter text-lg font-semibold leading-8 text-left">
             Living Room

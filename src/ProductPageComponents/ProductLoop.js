@@ -12,132 +12,160 @@ const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
 
   return (
-    <div className=" h-[1042px] pt-[16px]">
+    <div className="w-full h-auto pt-4 px-4 md:px-160 md:h-[1042px]">
       {/* شريط التنقل */}
-      <div className="h-[24px] w-[466px] flex gap-[16px] bg-white justify-end">
+      <div className="h-6 w-full md:w-[466px] flex flex-wrap md:flex-nowrap gap-4 bg-white justify-end">
         {buttonTexts.map((text, index) => (
           <div key={index} className="flex items-center">
-            <button className="h-[24px] w-auto flex items-center text-blackButton_50 hover:text-blackButton">
+            <button className="h-6 w-auto flex items-center text-blackButton_50 hover:text-blackButton">
               <span className="whitespace-nowrap">{text}</span>
             </button>
             {index < buttonTexts.length - 1 && (
-              <ChevronRightIcon className="w-[12px] h-[12px] ml-[4px]" />
+              <ChevronRightIcon className="w-3 h-3 ml-1" />
             )}
           </div>
         ))}
       </div>
 
-      <div className="h-[986px] mt-[16px] flex justify-around gap-[24px] px[160px]">
-        <div className="w-[549px] h-[919px] grid -mr-60">
+      <div className="mt-4 flex flex-col md:flex-row justify-around gap-6 md:gap-24">
+        {/* قسم الصور */}
+        <div className="w-full md:w-[549px] h-auto md:h-[919px] grid">
           <img
             src="/images/cart1-big.png"
             alt="cart1-big"
-            className="h-[729px] w-[548px] -mr-60"
+            className="w-full h-auto object-cover"
           />
-          <div className="flex justify-between">
-            <img alt="2" src="/images/cart2-big.png" />
-            <img alt="3" src="/images/cart3-big.png" />
-            <img alt="4" src="/images/cart4-big.png" />
+          <div className="flex justify-between mt-4">
+            <img
+              alt="2"
+              src="/images/cart2-big.png"
+              className="w-1/4 h-auto object-cover"
+            />
+            <img
+              alt="3"
+              src="/images/cart3-big.png"
+              className="w-1/4 h-auto object-cover"
+            />
+            <img
+              alt="4"
+              src="/images/cart4-big.png"
+              className="w-1/4 h-auto object-cover"
+            />
           </div>
         </div>
 
-        <div className="w-[508px] h-[986px]">
-          <div className="h-[706px] w-full">
-            <div className="h-[248px] grid gap-[16px] items-start justify-start">
-              <div className="flex">
+        {/* قسم التفاصيل */}
+        <div className="w-full md:w-[508px] h-auto">
+          <div className="h-auto">
+            {/* قسم العنوان والمراجعات */}
+            <div className="grid gap-4">
+              <div className="flex items-center">
                 <StarsDisplay />
-                <div className="ml-[10px]">11 Reviews</div>
+                <div className="ml-2">11 Reviews</div>
               </div>
-              <h1 className="font-poppins text-[40px] font-medium leading-[44px] tracking-[-0.4px] text-left w-[208px] h-[44px] text-blackButton">
+              <h1 className="font-poppins text-2xl md:text-4xl font-medium tracking-tight text-blackButton">
                 Tray Table
               </h1>
-              <p className="font-inter text-[16px] font-normal leading-[26px] text-left w-[508px] h-[78px] text-blackButton_50">
+              <p className="font-inter text-base md:text-lg text-blackButton_50">
                 Buy one or buy a few and make every space where you sit more
                 convenient. Light and easy to move around with removable tray
                 top, handy for serving snacks.
               </p>
-              <div className="flex w-[508px] h-[34px] gap-[12px] justify-start">
-                <div className="font-poppins text-[28px] font-medium leading-[34px] tracking-[-0.6px] text-left w-[103px] h-[34px] text-blackButton">
+              <div className="flex items-center gap-3">
+                <div className="font-poppins text-xl md:text-2xl font-medium text-blackButton">
                   $199.00
                 </div>
-                <div className="mt-[4px] font-poppins text-[20px] font-medium leading-[28px] text-left w-[83px] h-[28px] text-blackButton_50 line-through">
+                <div className="font-poppins text-lg md:text-xl font-medium text-blackButton_50 line-through">
                   $400.00
                 </div>
               </div>
             </div>
 
-            <div className="h-[166px] grid items-center border-y-[1px] border-b-blackButton_50">
-              <div className="w-[360px] h-[118px] gap-[12px] grid">
-                <div className="w-[360px] h-[26px] font-inter text-[16px] font-normal leading-[26px] text-left">
+            {/* قسم العداد */}
+            <div className="mt-4 border-y border-b-blackButton_50 py-4">
+              <div className="grid gap-3">
+                <div className="font-inter text-base md:text-lg text-blackButton_50">
                   Offer expires in:
                 </div>
-
-                <div className="w-[288px] h-[80px] gap-[16px] flex">
+                <div className="flex gap-4">
                   <CountDownn />
                 </div>
               </div>
             </div>
 
-            <div className="h-[292px] w-[334px] ">
-              <div className="w-[144px] h-[66px] gap-2 grid mt-[30px]">
-                <p className="text-blackButton_50 font-inter text-[20px] font-normal leading-[32px] text-left">
+            {/* قسم المقاسات والألوان */}
+            <div className="mt-6">
+              <div className="grid gap-2">
+                <p className="text-blackButton_50 font-inter text-base md:text-lg">
                   Measurements
                 </p>
-                <p className="text-blackButton font-inter text-[16px] font-semibold leading-[26px] text-left">
+                <p className="text-blackButton font-inter text-base md:text-lg font-semibold">
                   17 1/2x20 5/8 "
                 </p>
               </div>
-              <div className="w-[334px] h-[154px] gap-4 grid mt-[40px] ">
-                <div className="w-[134px] h-[66px] gap-[16pxS] grid  ">
-                  <p className="font-inter text-[16px] font-semibold leading-[26px] text-left text-blackButton_50">
+              <div className="mt-10 grid gap-4">
+                <div className="grid gap-2">
+                  <p className="font-inter text-base md:text-lg text-blackButton_50">
                     Choose Color
                   </p>
-                  <p className="font-inter text-[20px] font-normal leading-[32px] text-left text-blackButton">
+                  <p className="font-inter text-lg md:text-xl text-blackButton">
                     Black
                   </p>
                 </div>
-                <div className="w-[334px] h-[72px] gap-4 flex">
+                <div className="flex flex-wrap gap-4">
                   <img
-                    alt=""
+                    alt="color1"
                     src="/images/cart1.png"
-                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                    className="w-18 h-18 object-cover border border-gray-300"
                   />
                   <img
-                    alt=""
+                    alt="color2"
                     src="/images/cart1.png"
-                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                    className="w-18 h-18 object-cover border border-gray-300"
                   />
                   <img
-                    alt=""
+                    alt="color3"
                     src="/images/cart1.png"
-                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                    className="w-18 h-18 object-cover border border-gray-300"
                   />
                   <img
-                    alt=""
+                    alt="color4"
                     src="/images/cart1.png"
-                    className="w-[72px] h-[72px] gap-0  border-gray-300"
+                    className="w-18 h-18 object-cover border border-gray-300"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className=" h-[184px] w-full grid gap-[16px] py-[32px] border-b-[1px] border-b-background_50">
-            <div className="h-[52px] flex gap-[24px] justify-between">
-              <ProductButton />
-              <WishlistButton />
+
+          {/* قسم الأزرار */}
+          <div className="mt-6 border-b grid  border-b-background_50 py-8">
+            <div className="flex flex-col md:flex-row gap-6 justify-between">
+              <div className="flex gap-6">
+                <ProductButton />
+                <WishlistButton />
+              </div>
             </div>
-            <AddCart label="Add to Cart" width="508px" height="52px" />
+            <div className="grid w-full">
+              <AddCart label="Add to Cart" width="full" height="52px" />
+            </div>
           </div>
-          <div className="h-[96px] w-full grid justify-start items-center ">
-            <div className="w-[147px] flex gap-[98px] font-inter text-[12px] font-normal leading-[20px] text-left grid-cols-1">
-              <p className="text-blackButton_50">SKU</p>
-              <p className="text-blackButton">1117</p>
-            </div>
-            <div className="w-[147px] flex gap-[98px] font-inter text-[12px] font-normal leading-[20px] text-left grid-cols-2 mb-[25px]">
-              <p className="text-blackButton_50">CATEGORY</p>
-              <p className="text-blackButton whitespace-nowrap -ml-[35px]  ">
-                Living Room, Bedroom
-              </p>
+
+          {/* قسم التفاصيل الإضافية */}
+          <div className="mt-6 flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="w-full md:w-36">
+                <p className="text-blackButton_50 text-sm md:text-base">SKU</p>
+                <p className="text-blackButton text-sm md:text-base">1117</p>
+              </div>
+              <div className="w-full md:w-36">
+                <p className="text-blackButton_50 text-sm md:text-base">
+                  CATEGORY
+                </p>
+                <p className="text-blackButton text-sm md:text-base whitespace-nowrap">
+                  Living Room, Bedroom
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -5,13 +5,16 @@ import PageHeader from "../ShopPageComponents/PageHeader";
 import Products from "./../ShopPageComponents/Products";
 import Newsletter from "../card/Newsletter";
 import Footer from "../card/Footer";
+
 const ShopPage = () => {
   return (
-    <div className="w-full h-[2808px] ">
+    <div className="w-full min-h-screen flex flex-col">
       <NotificationBar />
       <NavBar />
       <PageHeader />
-      <Products />
+      <div className="flex-grow">
+        <Products />
+      </div>
       <Newsletter />
       <Footer />
     </div>

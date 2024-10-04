@@ -34,7 +34,7 @@ const ProductList = ({ numberOfItems }) => {
     },
     {
       id: 5,
-      image: "/images/product5.png",
+      image: "/images/product2.png",
       name: "Toasted",
       price: "$244.99",
     },

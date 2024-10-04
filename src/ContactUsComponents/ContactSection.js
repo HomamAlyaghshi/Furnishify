@@ -26,43 +26,40 @@ const ContactSection = () => {
   ]);
 
   return (
-    <div className="w-[1120px] h-[684px] grid gap-[40px] ">
+    <div className="w-full h-auto grid gap-[40px] mx-auto p-4">
       {/**INFO section */}
-      <div className="font-poppins text-[40px] font-medium leading-[44px] tracking[-0.4px] text-center w-[1120px] h-[44px] text-1212">
+      <div className="font-poppins text-[32px] md:text-[40px] font-medium leading-[44px] text-center w-full">
         Contact Us
       </div>
-      <div className="w-[1121px] h-auto gap-[24px] flex justify-center items-center">
-        {/** Cards here */}
+
+      {/** Cards section */}
+      <div className="w-full h-auto gap-[24px] flex flex-col md:flex-row justify-center items-center">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="w-[357.67px] h-[156px] p-[16px] px-[32px] grid gap-[16px]  text-center justify-center items-center"
+            className="w-full md:w-[357.67px] h-auto p-[16px] grid gap-[16px] text-center justify-center items-center border border-gray-300 rounded-lg"
           >
-            <img
-              alt={card.alt}
-              src={card.image}
-              className="mx-auto" // This centers the image horizontally
-            />
-            <h1 className="font-inter text-[16px] font-semibold leading-[26px] text-center text-blackButton_50">
+            <img alt={card.alt} src={card.image} className="mx-auto" />
+            <h1 className="font-inter text-[16px] font-semibold leading-[26px] text-blackButton_50">
               {card.label}
             </h1>
-            <p className="font-inter text-[16px] font-semibold leading-[26px] text-center text-blackButton">
+            <p className="font-inter text-[16px] font-semibold leading-[26px] text-blackButton">
               {card.text}
             </p>
           </div>
         ))}
       </div>
-      {/**Get in touch section */}
-      <div className=" flex justify-between gap-[24px] w-full h-[404px] ">
-        <div className="h-full grid gap-[34px]  w-1/2 ">
+
+      {/** Get in touch section */}
+      <div className="flex flex-col md:flex-row justify-between gap-[24px] w-full h-auto">
+        <div className="h-full grid gap-[16px] w-full">
           <Input labelText={"Full Name"} placeholder={"Your Name"} />
           <Input labelText={"Email address"} placeholder={"Your Email"} />
-
           <Input labelText={"Message"} placeholder={"Your Message"} />
-          <AddCart label={"send message"} width={"189px"} height={"40px"} />
+          <AddCart label={"Send Message"} width={"189px"} height={"40px"} />
         </div>
 
-        <div className="h-full w-1/2 ">
+        <div className="h-full w-full mt-4 md:mt-0">
           <MapComponent />
         </div>
       </div>

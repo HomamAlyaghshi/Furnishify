@@ -49,22 +49,22 @@ const Footer = () => {
             <button>
               <img
                 alt="instagram"
-                src="/images/instagram.svg"
-                className="h-[24px] w-[24px] bg-white "
+                src="/images/instagram.png"
+                className="h-[24px] w-[24px]  "
               />
             </button>
             <button className="bg-blackButton">
               <img
                 alt="facebook"
-                src="/images/facebook.svg"
-                className="h-[24px] w-[24px] bg-white"
+                src="/images/facebook.png"
+                className="h-[24px] w-[24px] "
               />
             </button>
             <button>
               <img
                 alt="youtube"
-                src="/images/youtube.svg"
-                className="h-[24px] w-[24px] bg-white "
+                src="/images/youtube.png"
+                className="h-[24px] w-[24px]  "
               />
             </button>
           </div>

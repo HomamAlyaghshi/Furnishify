@@ -3,38 +3,39 @@ import NavBar from "../card/NavBar";
 import HeaderOfAllAccount from "./HeaderOfAllAccount";
 import Footer from "../card/Footer";
 import SideBar from "./SideBar";
+
 const Address = () => {
   return (
-    <div className="h-[1435px]   ">
+    <div className="h-auto">
       <NavBar />
       <div className="flex justify-center items-center">
         <HeaderOfAllAccount />
       </div>
       <div className="grid justify-center items-center">
-        <div className="w-[1120px] h-[828px]  flex justify-between mb-16  ">
+        <div className="w-full max-w-[1120px] h-auto flex flex-col md:flex-row justify-between mb-16">
           <SideBar />
           {/**Address Section */}
-          <div className="w-[851px] h-[191px] p-[0px_72px] gap-[19px] grid ">
+          <div className="w-full max-w-[851px] md:h-full h-auto items-center p-4 md:p-[0px_72px] gap-[19px] grid">
             <p className="font-inter text-[20px] font-semibold leading-[32px] text-left">
               Address
             </p>
-            <div className="flex gap-[23px] ">
-              <div className="w-[342px] h-[140px] p-[16px] gap-[8px] rounded-[8px] border-[1px] ">
+            <div className="flex flex-col md:flex-row gap-[23px]">
+              <div className="w-full md:w-[342px] h-auto p-[16px] gap-[8px] rounded-[8px] border-[1px] ">
                 <h2 className="font-bold text-blackButton mb-3">
                   Billing Address
                 </h2>
                 <p>
                   Sofia Havertz <br /> (+1) 234 567 890
-                  <br /> 345 Long Island, NewYork, United States
+                  <br /> 345 Long Island, New York, United States
                 </p>
               </div>
-              <div className="w-[342px] h-[140px] p-[16px] gap-[8px] rounded-[8px] border-[1px] ">
+              <div className="w-full md:w-[342px] h-auto p-[16px] gap-[8px] rounded-[8px] border-[1px] ">
                 <h2 className="font-bold text-blackButton mb-3">
                   Billing Address
                 </h2>
                 <p>
                   Sofia Havertz <br /> (+1) 234 567 890
-                  <br /> 345 Long Island, NewYork, United States
+                  <br /> 345 Long Island, New York, United States
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import React from "react";
 const FeatureSection = () => {
   return (
-    <div className="w-full h-auto  flex flex-col md:flex-row mx-auto overflow-hidden">
+    <div className="w-full h-full flex flex-col md:flex-row mx-auto overflow-hidden">
       {/* القسم الخاص بالصورة */}
       <div className="w-full h-full md:h-full md:w-1/2 bg-slate-100">
         <img
@@ -12,7 +12,7 @@ const FeatureSection = () => {
         />
       </div>
       {/* القسم الخاص بالنصوص */}
-      <div className="w-full h-auto md:h-full md:w-1/2 bg-slate-100   grid justify-center items-center p-6 md:p-[72px]">
+      <div className="w-full h-full md:h-full md:w-1/2 bg-slate-100   grid justify-center items-center p-6 md:p-[72px]">
         <div className="w-auto h-auto grid gap-[55px]">
           <h1 className="font-poppins text-[32px] md:text-[40px] font-medium leading-[36px] md:leading-[44px] tracking-[-0.4px] text-left">
             About Us

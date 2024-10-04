@@ -31,12 +31,11 @@ const NavBar = () => {
   return (
     <div className="h-[60px] px-[160px] py-[16px] flex justify-between items-center">
       {/* مينيو برغر للموبايل */}
-      <div className="md:hidden flex items-center">
+      <div className="md:hidden flex items-center ">
         <button onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6 text-blackButton" />
         </button>
       </div>
-
       {/* النص "3legant" */}
       <div className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] gap-0 font-bold text-blackButton">
         3legant.
@@ -96,7 +95,7 @@ const NavBar = () => {
 
       {/* الأيقونات للموبايل */}
       <div className="flex md:hidden items-center ml-auto">
-        <div className="flex gap-[4px]">
+        <div className="flex gap-[4px] ml-6">
           <button onClick={toggleCart}>
             <ShoppingBagIcon className="w-6 h-6 text-blackButton" />
           </button>

@@ -21,11 +21,11 @@ const CartProduct = ({ image, productName, color, price, onRemove, id }) => {
   const totalPrice = quantity * price;
 
   return (
-    <div className="w-[643px] h-[144px] py-6 gap-0 border-b flex justify-between">
+    <div className="w-full max-w-[643px] h-auto py-6 gap-0 border-b flex  flex-col md:flex-row justify-between ">
       {/* Cart Item */}
-      <div className="w-[316px] h-auto flex gap-2">
+      <div className="flex w-full md:w-[316px] gap-4">
         <img alt={productName} src={image} className="w-[80px] h-[96px]" />
-        <div className="w-[220px] h-auto grid gap-4">
+        <div className="w-full h-auto grid gap-2">
           <p className="font-inter text-[14px] font-semibold leading-[22px] text-left text-blackButton">
             {productName}
           </p>
@@ -41,7 +41,7 @@ const CartProduct = ({ image, productName, color, price, onRemove, id }) => {
         </div>
       </div>
       {/* Quantity and Price Info */}
-      <div className="w-[328px] h-auto gap-0 flex items-center justify-between">
+      <div className="w-full md:w-[328px] flex justify-between items-center mt-4 md:gap-14 ">
         <QuantityButtonSmall
           quantity={quantity}
           onDecrease={handleDecrease}

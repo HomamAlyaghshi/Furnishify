@@ -11,13 +11,13 @@ import CartProductItem from "../Expand/CartProductItem";
 import useCartStore from "../store/cartStore";
 
 const CheckoutDetails = ({ id }) => {
-  const cartItems = useCartStore((state) => state.cartItems); // سحب عناصر السلة
+  const cartItems = useCartStore((state) => state.cartItems);
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
 
   const handleIncrease = (id) => {
-    increaseQuantity(id); // تمرير id هنا
+    increaseQuantity(id);
   };
   const handleDecrease = (id) => {
     decreaseQuantity(id);
@@ -27,26 +27,28 @@ const CheckoutDetails = ({ id }) => {
   };
 
   return (
-    <div className="h-[1406px]">
+    <div className="h-full w-full">
       <NavBar />
-      {/**Cart Section */}
-      <div className="h-[1958px] px-[160px] py-[80px] grid place-items-center justify-center">
+      <div className="flex justify-center items-center w-full">
         <HeaderOfAllCart />
-        <div className="w-[1120px] h-[1634px] flex justify-between">
-          <div className="h-[1474px] w-[643px] grid gap-[24px]">
-            {/**Form */}
-            <div className="w-full h-[372px] py-[40px] px-[24px] border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
-              <p className="text-black text-[20px]">Contact Information</p>
-              <div className="w-[595px] h-[64px] justify-between flex gap-[12px]">
+      </div>
+      <div className="px-4 py-8 sm:px-16 lg:px-32">
+        <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex-1 lg:mr-8 mb-8 lg:mb-0">
+            {/**Form Section */}
+            <div className="bg-white border border-blackButton_50 rounded-md p-6 mb-6">
+              <p className="text-black text-xl">Contact Information</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <Input labelText={"FIRST NAME"} placeholder={"First name"} />
                 <Input labelText={"LAST NAME"} placeholder={"Last name"} />
               </div>
               <Input labelText={"PHONE NUMBER"} placeholder={"Phone number"} />
               <Input labelText={"EMAIL ADDRESS"} placeholder={"Your Email"} />
             </div>
-            {/**Form 2 */}
-            <div className="w-full h-[545px] py-[40px] px-[24px] border-[1px] border-blackButton_50 grid gap-[24px] rounded-[4px]">
-              <p className="font-poppins text-[20px] font-medium leading-[28px] text-left">
+
+            {/**Shipping Address Section */}
+            <div className="bg-white border border-blackButton_50 rounded-md p-6 mb-6">
+              <p className="font-poppins text-xl font-medium">
                 Shipping Address
               </p>
               <Input
@@ -62,43 +64,31 @@ const CheckoutDetails = ({ id }) => {
                 fourthOption={"Lebanon"}
               />
               <Input labelText={"TOWN / CITY *"} placeholder={"Town / City"} />
-              <div className="flex justify-between gap-[12px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <Input labelText={"STATE"} placeholder={"State"} />
                 <Input labelText={"ZIP CODE"} placeholder={"Zip code"} />
               </div>
-              <div className="flex gap-[12px] mb-[12px]">
-                <input
-                  type="checkbox"
-                  className="w-[24px] h-[24px] rounded-[1.5px]"
-                />
+              <div className="flex items-center mb-4">
+                <input type="checkbox" className="w-6 h-6 mr-2" />
                 <p className="text-blackButton_50">
                   Use a different billing address (optional)
                 </p>
               </div>
             </div>
-            {/**Form 3 */}
-            <div className="w-full h-[468px] py-[40px] px-[24px] grid gap-[24px] border-[1px] border-blackButton_50 rounded-[4px]">
-              <h1 className="text-[20px] text-blackButton">Payment method</h1>
-              <div className="w-[595px] h-[336px] gap-[24px] grid">
-                <div className="grid w-full">
-                  <div className="w-[595px] h-[52px] border-[1px] border-blackButton rounded-[4px] flex items-center justify-between bg-white gap-[12px]">
-                    <div className="flex gap-4 ml-4">
-                      <Radios />
-                      <p>Pay By Credit Card</p>
-                    </div>
-                    <div className="w-8 h-8 mr-4">
-                      <EyeIcon />
-                    </div>
-                  </div>
-                  <div className="w-[595px] h-[52px] border-[1px] border-blackButton rounded-[4px] flex items-center justify-between bg-white gap-[12px]">
-                    <div className="flex gap-4 ml-4">
-                      <Radios />
-                      <p>Paypal</p>
-                    </div>
-                    <div className="w-8 h-8 mr-4">
-                      <EyeIcon />
-                    </div>
-                  </div>
+
+            {/**Payment Method Section */}
+            <div className="bg-white border border-blackButton_50 rounded-md p-6">
+              <h1 className="text-xl text-blackButton">Payment method</h1>
+              <div className="space-y-4">
+                <div className="flex items-center border border-blackButton rounded-md p-2">
+                  <Radios />
+                  <p>Pay By Credit Card</p>
+                  <EyeIcon className="ml-auto w-6 h-6" />
+                </div>
+                <div className="flex items-center border border-blackButton rounded-md p-2">
+                  <Radios />
+                  <p>Paypal</p>
+                  <EyeIcon className="ml-auto w-6 h-6" />
                 </div>
                 <Input
                   placeholder={"1234 1234 1234"}
@@ -110,11 +100,12 @@ const CheckoutDetails = ({ id }) => {
                 </div>
               </div>
             </div>
-            <AddCart label={"Place Order"} width={"643px"} height={"52px"} />
+            <AddCart label={"Place Order"} width={"100%"} height={"52px"} />
           </div>
+
           {/*Order Summary */}
-          <div className="w-[413px] h-[862px] p-[16px_24px] grid gap-[16px] rounded-[6px] border-blackButton_50 border-[1px]">
-            <p className="text-[28px] text-blackButton">Order summary</p>
+          <div className="bg-white border border-blackButton_50 rounded-md p-6 w-full lg:w-1/3">
+            <p className="text-2xl text-blackButton">Order summary</p>
             <div>
               {cartItems.map((item) => (
                 <CartProductItem
@@ -126,24 +117,22 @@ const CheckoutDetails = ({ id }) => {
                 />
               ))}
             </div>
-            <div className="grid w-[365px] h-[208px]">
-              <div className="flex justify-between items-center border-b-[1px] border-blackButton_50">
-                <p className="font-inter text-[16px] font-normal leading-[26px] text-left text-blackButton">
-                  JenkateMW
-                </p>
-                <div className="text-kiwi font-inter text-[16px] font-semibold leading-[26px] text-right">
+            <div className="space-y-4 mt-4">
+              <div className="flex justify-between items-center border-b border-blackButton_50">
+                <p className="font-inter text-lg text-blackButton">JenkateMW</p>
+                <div className="text-kiwi font-inter font-semibold">
                   -$25.00 <button>[Remove]</button>
                 </div>
               </div>
-              <div className="flex justify-between items-center border-b-[1px] border-blackButton_50">
+              <div className="flex justify-between items-center border-b border-blackButton_50">
                 <p>Shipping</p>
                 <p className="font-bold">Free</p>
               </div>
-              <div className="flex justify-between items-center border-b-[1px] border-blackButton_50">
+              <div className="flex justify-between items-center border-b border-blackButton_50">
                 <p>Subtotal</p>
                 <p className="font-bold">$99.99</p>
               </div>
-              <div className="flex justify-between items-center font-poppins text-[20px] font-medium leading-[28px] text-left">
+              <div className="flex justify-between font-poppins text-lg font-medium">
                 <p>Total</p>
                 <p>$132.23</p>
               </div>

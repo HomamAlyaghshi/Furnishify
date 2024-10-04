@@ -2,28 +2,29 @@ import React from "react";
 import NavBar from "../card/NavBar";
 import HeaderOfAllCart from "./HeaderOfAllCart";
 import Footer from "../card/Footer";
+
 const OrderComplete = () => {
   return (
-    <div className=" h-[1406px]">
+    <div className="h-full md:h-full">
       <NavBar />
       {/**Cart Section */}
-      <div className=" h-[1097px] px-[160px] py-[80px]  grid place-items-center">
+      <div className="py-8 px-4 md:px-16 lg:px-32 grid place-items-center">
         <HeaderOfAllCart />
-        <div className="w-[738px] h-[730px] p-[80px_95px] grid gap-[40px] shadow-2xl rounded-[8px] text-center">
+        <div className="w-full max-w-lg h-full max-h-[748px]  md:max-h-[730px] md:max-w-2xl p-8 grid gap-8 shadow-2xl rounded-lg text-center bg-white">
           <div>
-            <p className="text-blackButton_50 text-[28px]">Thank you! 🎉</p>
-            <p className="text-blackButton text-[40px]">
+            <p className="text-blackButton_50 text-2xl">Thank you! 🎉</p>
+            <p className="text-blackButton text-3xl">
               Your order has been received
             </p>
           </div>
-          <div className="flex gap-[32px] justify-center  ">
-            <div className="grid text-blackButton_50 gap-[12px] text-left">
-              <span>order code:</span>
+          <div className="flex gap-8 justify-center mt-6">
+            <div className="grid text-blackButton_50 gap-2 text-left">
+              <span>Order Code:</span>
               <span>Date:</span>
               <span>Total:</span>
-              <span>Payment method:</span>
+              <span>Payment Method:</span>
             </div>
-            <div className="grid text-blackButton gap-[12px] text-left">
+            <div className="grid text-blackButton gap-2 text-left">
               <span>#0123_45678</span>
               <span>October 19, 2023</span>
               <span>$1,345.00</span>
@@ -32,7 +33,6 @@ const OrderComplete = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

@@ -27,7 +27,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="h-[60px] px-[160px] py-[16px] flex justify-between items-center">
+    <div className="h-[60px] md:px-[160px] md:py-[16px] flex justify-between items-center">
       <div className="md:hidden flex items-center ">
         <button onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6 text-blackButton" />

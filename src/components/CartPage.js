@@ -7,7 +7,7 @@ import HeaderOfAllCart from "../CartPageComponents/HeaderOfAllCart";
 
 const CartPage = () => {
   return (
-    <div className=" h-full overflow-x-hidden overflow-y-hidden">
+    <div className=" h-full ">
       <NavBar />
       {/**Cart Section */}
       <div className=" h-auto md:px-[160px] md:py-[80px]  grid place-items-center">

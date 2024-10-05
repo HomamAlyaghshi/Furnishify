@@ -7,9 +7,9 @@ import FeatureSection from "../ContactUsComponents/FeatureSection";
 import ContactSection from "../ContactUsComponents/ContactSection";
 const ContactUs = () => {
   return (
-    <div className="h-full w-full    overflow-x-hidden overflow-y-hidden">
+    <div className="h-full w-full    ">
       <NavBar />
-      <div className="md:h-[1629px] w-full pt-[16px] pr-[160px] pb-[80px] pl-[160px] gap-[48px] grid justify-center items-center">
+      <div className="md:max-h-[1629px] w-full md:pt-[16px] md:pr-[160px] md:pb-[80px] md:pl-[160px] gap-[48px] grid justify-center items-center">
         <HeaderOfContactUs />
         <FeatureSection />
         <ContactSection />

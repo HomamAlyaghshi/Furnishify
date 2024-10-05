@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const SideBar = () => {
   const navigate = useNavigate();
-
   const handleChange = (event) => {
     navigate(event.target.value);
   };

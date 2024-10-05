@@ -11,7 +11,7 @@ import Footer from "../card/Footer";
 import NotificationBar from "../card/NotificationBar";
 const HomePage = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full p-0 m-0">
       <NotificationBar />
       <NavBar />
       <Slider />

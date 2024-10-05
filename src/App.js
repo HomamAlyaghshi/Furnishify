@@ -31,7 +31,7 @@ function App() {
         <Route path="/accountpage" element={<MyAccountPage />} />
         <Route path="/account-addresspage" element={<Address />} />
         <Route path="/account-orderpage" element={<OrderHistory />} />
-        <Route path="/address-wishlishpage" element={<WishList />} />
+        <Route path="/address-wishlistpage" element={<WishList />} />
         <Route path="/blogpage" element={<BlogPage />} />
         <Route path="/contactuspage" element={<ContactUs />} />
       </Routes>

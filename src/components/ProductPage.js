@@ -7,7 +7,7 @@ import Newsletter from "../card/Newsletter";
 import Footer from "../card/Footer";
 const ProductPage = () => {
   return (
-    <div className="w-full  overflow-x-hidden overflow-y-hidden">
+    <div className="w-full h-full  overflow-x-hidden overflow-y-hidden">
       <NotificationBar />
       <div className="border-b-[1px]  text-blackButton_50">
         <NavBar />

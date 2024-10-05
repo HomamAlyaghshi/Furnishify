@@ -8,7 +8,7 @@ import Footer from "../card/Footer";
 
 const ShopPage = () => {
   return (
-    <div className="w-auto min-h-screen flex flex-col  overflow-x-hidden overflow-y-hidden">
+    <div className="w-auto h-full min-h-screen flex flex-col  overflow-x-hidden overflow-y-hidden">
       <NotificationBar />
       <NavBar />
       <PageHeader />

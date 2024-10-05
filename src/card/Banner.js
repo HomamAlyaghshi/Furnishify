@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const Banner = () => {
   return (
-    <div className="h-[532px] flex flex-col md:flex-row mr-5">
+    <div className="h-[532px] justify-center overflow-x-hidden items-center flex flex-col md:flex-row md:mr-5">
       <img
         className="bg-slate-500 w-full md:w-1/2 h-full"
         alt="Banner"

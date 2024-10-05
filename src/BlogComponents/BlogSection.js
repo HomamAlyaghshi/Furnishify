@@ -52,7 +52,7 @@ const BlogSection = () => {
     },
   ];
 
-  // تحديد عدد الأعمدة وعدد العناصر بناءً على التخطيط
+  // تحديد عدد الأعمدة بناءً على التخطيط
   const getGridClasses = () => {
     switch (layout) {
       case "3x3":
@@ -60,9 +60,9 @@ const BlogSection = () => {
       case "2x2":
         return "grid-cols-2"; // عمودين
       case "1x1":
-        return "grid-cols-2"; // عمودين، لكن نعرض فقط عنصرين
+        return "grid-cols-1"; // عمود واحد للموبايل
       default:
-        return "grid-cols-3";
+        return "grid-cols-3"; // افتراضي
     }
   };
 
@@ -72,7 +72,7 @@ const BlogSection = () => {
       case "2x2":
         return blogData.slice(0, 4); // عرض 4 عناصر فقط
       case "1x1":
-        return blogData.slice(0, 2); // عرض عنصرين فقط
+        return blogData.slice(0, 1); // عرض عنصر واحد فقط
       default:
         return blogData; // عرض جميع العناصر
     }
@@ -81,13 +81,13 @@ const BlogSection = () => {
   return (
     <>
       <BlogNav setLayout={setLayout} />
-      <div className="h-[1619px] flex justify-center items-start pt-[40px] px-[160px] pb-[80px] ">
+      <div className="h-auto flex justify-center items-start pt-[40px] md:px-[160px] px-4 pb-[80px]">
         <div
-          className={`w-[1121px] h-auto grid gap-[40px] ${getGridClasses()}`}
+          className={`w-full md:w-[1121px] h-auto md:grid grid-cols-1 gap-[40px]  ${getGridClasses()}`}
         >
           {getVisibleItems().map((post, index) => (
             <div key={index} className="flex gap-[25px]">
-              <div className="w-full h-full flex">
+              <div className="w-full h-full flex ">
                 <BlogList blogPosts={[post]} />
               </div>
             </div>

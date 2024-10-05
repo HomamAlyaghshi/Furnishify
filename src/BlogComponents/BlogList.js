@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogList = ({ blogPosts }) => {
   return (
-    <div className="grid w-[357px] gap-[24px]">
+    <div className="grid w-full md:max-w-[357px] gap-[24px]">
       {blogPosts.map((post, index) => (
         <div key={index} className="grid gap-[24px]">
           <img

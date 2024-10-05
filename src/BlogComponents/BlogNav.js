@@ -2,7 +2,7 @@ import React from "react";
 
 const BlogNav = ({ setLayout }) => {
   return (
-    <div className="h-[40px] flex gap-[32px] justify-around">
+    <div className="md:max-h-[40px] w-full flex gap-[32px] justify-around">
       <div className="flex justify-between items-center w-[153px] gap-[40px] whitespace-nowrap">
         <button>All Blog</button>
         <button>Featured</button>
@@ -13,7 +13,7 @@ const BlogNav = ({ setLayout }) => {
         <select
           id="sort"
           name="sort"
-          className="px-3 py-2 focus:outline-none"
+          className="px-3 py-2 focus:outline-none hidden md:block"
           onChange={(e) => setLayout(e.target.value)}
         >
           <option value="3x3">3 X 3</option>
@@ -23,7 +23,7 @@ const BlogNav = ({ setLayout }) => {
       </div>
 
       {/* أيقونات العرض */}
-      <div className="flex justify-between w-[184px]">
+      <div className="flex justify-between gap-3  md:max-w-[184px]">
         <button onClick={() => setLayout("3x3")}>
           <img
             alt="3X3"

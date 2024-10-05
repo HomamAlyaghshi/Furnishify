@@ -16,5 +16,5 @@
   }
   
   #custom-slider {
-    overflow-y: auto; /* إظهار الشريط العمودي */
-    overflow-x: auto; /* إخفاء الشريط الأفقي */ }
+    overflow-y:hidden; /* إظهار الشريط العمودي */
+    overflow-x: visible; /* إخفاء الشريط الأفقي */ }

@@ -1,5 +1,6 @@
 import React from "react";
 import ProductList from "./ProductList";
+import "./custom-scrollbar.css";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const ProductCarousel = () => {
@@ -20,7 +21,7 @@ const ProductCarousel = () => {
       {/** الصور */}
       <div
         id="custom-slider"
-        className="flex overflow-x-auto no-scrollbar mr-4  whitespace-nowrap"
+        className="flex overflow-x-auto no-scrollbar mr-4  whitespace-nowrap "
       >
         <ProductList />
       </div>

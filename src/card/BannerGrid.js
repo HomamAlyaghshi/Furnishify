@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const BannerGrid = () => {
   return (
-    <div className="h-auto md:h-[664px] overflow-x-hidden bg-white flex flex-col md:flex-row gap-[24px] justify-center items-center relative">
+    <div className="h-full md:max-h-[664px] bg-white flex flex-col md:flex-row gap-[24px] justify-center items-center relative">
       {/* العمود الأيسر */}
       <div className="relative h-[664px] md:h-[664px] w-full md:w-[548px]">
         <img

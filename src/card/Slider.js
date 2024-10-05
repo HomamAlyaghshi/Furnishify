@@ -21,7 +21,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="w-full max-w-[1440px] h-auto px-[16px] md:px-[160px] pb-[40px] mx-auto ">
+    <div className="w-full max-w-[1440px] h-full px-[16px] md:px-[160px] pb-[40px] ">
       {/* Slider Wrapper */}
       <div className="relative w-full h-[536px] overflow-hidden">
         {/* Slides */}

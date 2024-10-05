@@ -11,37 +11,31 @@ import FlyoutCart from "./../Expand/FlyoutCart";
 
 const NavBar = () => {
   const cartItems = useCartStore((state) => state.cartItems);
+  const isCartOpen = useCartStore((state) => state.isCartOpen);
+  const toggleCart = useCartStore((state) => state.toggleCart);
+
   // حساب إجمالي الكمية
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0
   );
 
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // حالة المينيو
-
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // تبديل حالة المينيو
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
     <div className="h-[60px] px-[160px] py-[16px] flex justify-between items-center">
-      {/* مينيو برغر للموبايل */}
       <div className="md:hidden flex items-center ">
         <button onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6 text-blackButton" />
         </button>
       </div>
-      {/* النص "3legant" */}
       <div className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] gap-0 font-bold text-blackButton">
         3legant.
       </div>
-
-      {/* القائمة المنسدلة */}
       {isMenuOpen && (
         <div className="absolute top-[60px] left-0 w-full bg-white shadow-md z-10">
           <div className="flex flex-col items-center py-2">
@@ -68,8 +62,6 @@ const NavBar = () => {
           </div>
         </div>
       )}
-
-      {/* القائمة الثابتة للسطح المكتب */}
       <div className="hidden md:flex w-[324px] h-[24px] gap-[40px]">
         <Link to="/homepage">
           <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
@@ -92,8 +84,6 @@ const NavBar = () => {
           </button>
         </Link>
       </div>
-
-      {/* الأيقونات للموبايل */}
       <div className="flex md:hidden items-center ml-auto">
         <div className="flex gap-[4px] ml-6">
           <button onClick={toggleCart}>
@@ -104,8 +94,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
-      {/* الأيقونات للسطح المكتب */}
       <div className="hidden md:flex w-[130px] h-[28px] flex gap-[16px]">
         <MagnifyingGlassIcon className="w-6 h-6 text-blackButton" />
         <Link to={"/accountpage"}>
@@ -122,9 +110,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
-      {isCartOpen && <FlyoutCart onClose={toggleCart} />}
-      {/* عرض الكارت عند الفتح */}
+      {isCartOpen && <FlyoutCart />} {/* عرض الكارت عند الفتح */}
     </div>
   );
 };

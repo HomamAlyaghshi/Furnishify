@@ -52,6 +52,9 @@ const useCartStore = create((set) => ({
   openCart: () => set({ isCartOpen: true }),
   closeCart: () => set({ isCartOpen: false }),
 
+  // دالة لتبديل حالة السلة
+  toggleCart: () => set((state) => ({ isCartOpen: !state.isCartOpen })),
+
   // دالة لحساب الـ Subtotal
   calculateSubtotal: () =>
     set((state) => ({

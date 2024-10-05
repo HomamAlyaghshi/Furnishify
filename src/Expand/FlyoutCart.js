@@ -1,9 +1,8 @@
-// src/FlyoutCart.js
 import React from "react";
 import "./Flyout-scrollbar.css";
 import AddCart from "./AddCart";
 import { Link } from "react-router-dom";
-import CartProductItem from "./CartProductItem"; // استيراد المكون الجديد
+import CartProductItem from "./CartProductItem";
 import useCartStore from "../store/cartStore";
 
 const FlyoutCart = () => {
@@ -19,11 +18,10 @@ const FlyoutCart = () => {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
-  const total = subtotal; // إذا كان هناك رسوم شحن أو ضرائب، يمكن تعديل هذا
+  const total = subtotal;
 
   return (
     <div className="fixed top-0 right-0 w-[413px] h-full bg-white py-[40px] px-[25px] flex flex-col justify-between z-30">
-      {/* زر الإغلاق */}
       <button
         onClick={closeCart}
         className="absolute top-4 right-4 text-gray-500 text-xl"

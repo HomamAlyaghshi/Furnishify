@@ -82,12 +82,12 @@ const ProductLoop = () => {
             </div>
 
             {/* قسم العداد */}
-            <div className="mt-4 border-y border-b-blackButton_50 py-4">
-              <div className="grid gap-3">
-                <div className="font-inter text-base md:text-lg text-blackButton_50">
+            <div className="mt-4 border-y border-b-blackButton_50 py-2 md:py-4">
+              <div className="grid gap-1 md:gap-3">
+                <div className="font-inter text-sm md:text-lg text-blackButton_50">
                   Offer expires in:
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-2 md:gap-4">
                   <CountDownn />
                 </div>
               </div>
@@ -139,9 +139,9 @@ const ProductLoop = () => {
           </div>
 
           {/* قسم الأزرار */}
-          <div className="mt-6 border-b grid border-b-background_50 py-8 w-full">
-            <div className="flex flex-col md:flex-row gap-6 justify-between w-full">
-              <div className="flex gap-6 w-full">
+          <div className="mt-6 border-b border-b-background_50 py-4 md:py-8 w-full overflow-x-hidden">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-6 justify-between w-full">
+              <div className="flex gap-3 md:gap-6 w-full">
                 <ProductButton />
                 <WishlistButton />
               </div>

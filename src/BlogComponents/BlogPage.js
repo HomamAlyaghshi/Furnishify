@@ -7,7 +7,7 @@ import BlogSection from "./BlogSection";
 
 const BlogPage = () => {
   return (
-    <div className="h-[2744px] overflow-hidden  ">
+    <div className="h-full overflow-hidden  ">
       <NavBar />
       <BlogHeader />
       <BlogSection />

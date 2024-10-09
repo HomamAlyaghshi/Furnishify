@@ -81,7 +81,7 @@ const BlogSection = () => {
   return (
     <>
       <BlogNav setLayout={setLayout} />
-      <div className="h-auto flex justify-center items-start pt-[40px] md:px-[160px] px-4 pb-[80px]">
+      <div className="h-auto flex justify-center items-start pt-[40px] md:px-[160px] px-4 pb-[80px] ">
         <div
           className={`w-full md:w-[1121px] h-auto md:grid grid-cols-1 gap-[40px]  ${getGridClasses()}`}
         >

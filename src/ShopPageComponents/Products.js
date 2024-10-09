@@ -99,7 +99,7 @@ const Products = () => {
       {/**Grid */}
       <div className="md:w-[834px] w-full  md:h-[1547px] gap-[40px]    ">
         <div className="flex flex-wrap justify-between w-full h-auto gap-4">
-          <div className="w-full md:w-auto h-[32px] text-black font-inter text-lg font-semibold leading-8 text-left">
+          <div className="w-full md:w-auto h-[32px] text-black font-inter text-lg font-semibold ml-5 leading-8 text-left">
             Living Room
           </div>
           <div className="w-full md:w-auto h-auto flex gap-4 justify-between items-center">
@@ -118,46 +118,48 @@ const Products = () => {
               </select>
             </div>
             {/** ايقونات العرض */}
-            <div className="flex justify-between w-full md:w-auto gap-4">
-              <button>
-                <img
-                  alt="3X3"
-                  src="/images/3x3.png"
-                  className="bg-white hover:bg-background_50"
-                />
-              </button>
-              <button>
-                <img
-                  alt="2X2"
-                  src="/images/2x2.png"
-                  className="bg-white hover:bg-background_50"
-                />
-              </button>
-              <button>
-                <img
-                  alt="1X1"
-                  src="/images/1x1-1.png"
-                  className="bg-white hover:bg-background_50"
-                />
-              </button>
-              <button>
-                <img
-                  alt="1X1"
-                  src="/images/1x1-2.png"
-                  className="bg-white hover:bg-background_50"
-                />
-              </button>
+            <div className="hidden sm:block">
+              <div className="flex justify-between w-full md:w-auto gap-4 ">
+                <button>
+                  <img
+                    alt="3X3"
+                    src="/images/3x3.png"
+                    className="bg-white hover:bg-background_50"
+                  />
+                </button>
+                <button>
+                  <img
+                    alt="2X2"
+                    src="/images/2x2.png"
+                    className="bg-white hover:bg-background_50"
+                  />
+                </button>
+                <button>
+                  <img
+                    alt="1X1"
+                    src="/images/1x1-1.png"
+                    className="bg-white hover:bg-background_50"
+                  />
+                </button>
+                <button>
+                  <img
+                    alt="1X1"
+                    src="/images/1x1-2.png"
+                    className="bg-white hover:bg-background_50"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div className="grid h-[1467px] justify-between items-center  gap-[24px] md:w-[834px]   ">
-          <div className="flex gap-[24px] w-[834px] h-[433px] justify-between    ">
+          <div className="flex  md:gap-[24px] w-[834px] h-[433px] justify-between    ">
             <ProductList numberOfItems={numberOfItems} />
           </div>
-          <div className="flex gap-[24px] w-[834px] h-[433px] justify-between    ">
+          <div className="flex md:gap-[24px] w-[834px] h-[433px] justify-between    ">
             <ProductList numberOfItems={numberOfItems} />
           </div>
-          <div className="flex gap-[24px] w-[834px] h-[433px] justify-between    ">
+          <div className="flex md:gap-[24px] w-[834px] h-[433px] justify-between    ">
             <ProductList numberOfItems={numberOfItems} />
           </div>
           <div className=" flex justify-center items-center font-inter text-base font-medium leading-7 tracking-tight text-center">

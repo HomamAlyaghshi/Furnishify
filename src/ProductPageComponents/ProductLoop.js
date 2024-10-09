@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
-import TimeDisplay from "./TimeDisplay";
 import ProductButton from "../Expand/ProductButton";
 import WishlistButton from "../Expand/WishlistButton";
 import AddCart from "../Expand/AddCart";
@@ -12,9 +11,9 @@ const ProductLoop = () => {
   const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
 
   return (
-    <div className="w-full h-auto pt-4 px-4 md:px-160 md:h-[1042px]">
+    <div className="w-full h-auto md:pt-4 md:px-4 md:px-160 md:h-[1042px]">
       {/* شريط التنقل */}
-      <div className="h-6 w-full md:w-[466px] flex flex-wrap md:flex-nowrap gap-4 bg-white justify-end">
+      <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start">
         {buttonTexts.map((text, index) => (
           <div key={index} className="flex items-center">
             <button className="h-6 w-auto flex items-center text-blackButton_50 hover:text-blackButton">

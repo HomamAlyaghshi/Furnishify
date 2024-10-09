@@ -23,28 +23,30 @@ const BlogNav = ({ setLayout }) => {
       </div>
 
       {/* أيقونات العرض */}
-      <div className="flex justify-between gap-3  md:max-w-[184px]">
-        <button onClick={() => setLayout("3x3")}>
-          <img
-            alt="3X3"
-            src="/images/3x3.png"
-            className="bg-white hover:bg-background_50"
-          />
-        </button>
-        <button onClick={() => setLayout("2x2")}>
-          <img
-            alt="2X2"
-            src="/images/2x2.png"
-            className="bg-white hover:bg-background_50"
-          />
-        </button>
-        <button onClick={() => setLayout("1x1")}>
-          <img
-            alt="1X1"
-            src="/images/1x1-1.png"
-            className="bg-white hover:bg-background_50"
-          />
-        </button>
+      <div className="hidden md:block">
+        <div className="flex justify-between gap-3  md:max-w-[184px] ">
+          <button onClick={() => setLayout("3x3")}>
+            <img
+              alt="3X3"
+              src="/images/3x3.png"
+              className="bg-white hover:bg-background_50"
+            />
+          </button>
+          <button onClick={() => setLayout("2x2")}>
+            <img
+              alt="2X2"
+              src="/images/2x2.png"
+              className="bg-white hover:bg-background_50"
+            />
+          </button>
+          <button onClick={() => setLayout("1x1")}>
+            <img
+              alt="1X1"
+              src="/images/1x1-1.png"
+              className="bg-white hover:bg-background_50"
+            />
+          </button>
+        </div>
       </div>
     </div>
   );

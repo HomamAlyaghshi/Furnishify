@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 import {
@@ -21,10 +21,25 @@ const NavBar = () => {
   );
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null); // إنشاء مرجع للقائمة
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // إغلاق القائمة عند النقر خارجها
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="h-[60px] w-full md:px-[160px] md:py-[16px] flex justify-between items-center">
@@ -37,7 +52,10 @@ const NavBar = () => {
         3legant.
       </div>
       {isMenuOpen && (
-        <div className="absolute top-[60px] left-0 w-full bg-white shadow-md z-10">
+        <div
+          ref={menuRef} // إضافة المرجع هنا
+          className="absolute top-[60px] left-0 w-full bg-white shadow-md z-10"
+        >
           <div className="flex flex-col items-center py-2">
             <Link to="/homepage">
               <button className="py-2 text-blackButton_50 font-medium hover:text-blackButton">

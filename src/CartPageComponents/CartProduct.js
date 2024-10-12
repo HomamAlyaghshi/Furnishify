@@ -41,7 +41,7 @@ const CartProduct = ({ image, productName, color, price, onRemove, id }) => {
         </div>
       </div>
       {/* Quantity and Price Info */}
-      <div className="w-full md:w-[328px] flex justify-between items-center mt-4 md:gap-14 ">
+      <div className="w-full md:w-[328px] flex justify-between items-center md:mt-4 md:gap-14 gap-4 ">
         <QuantityButtonSmall
           quantity={quantity}
           onDecrease={handleDecrease}

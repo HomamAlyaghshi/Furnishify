@@ -102,7 +102,9 @@ const FlyoutCart = () => {
                 <div>${total.toFixed(2)}</div>
               </div>
               <Link to="/cartpage">
-                <AddCart label="Checkout" width="365px" height="52px" />
+                <button onClick={closeCart}>
+                  <AddCart label="Checkout" width="365px" height="52px" />
+                </button>
               </Link>
             </div>
           )}

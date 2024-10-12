@@ -1,10 +1,10 @@
 import React from "react";
-import NotificationBar from "../card/NotificationBar";
-import NavBar from "../card/NavBar";
+import NotificationBar from "../Shared/NotificationBar";
+import NavBar from "../Shared/NavBar";
 import PageHeader from "../ShopPageComponents/PageHeader";
 import Products from "./../ShopPageComponents/Products";
-import Newsletter from "../card/Newsletter";
-import Footer from "../card/Footer";
+import Newsletter from "../Shared/Newsletter";
+import Footer from "./../Shared/Footer";
 
 const ShopPage = () => {
   return (

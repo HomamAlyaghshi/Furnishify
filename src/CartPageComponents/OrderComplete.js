@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../card/NavBar";
+import NavBar from "../Shared/NavBar";
 import HeaderOfAllCart from "./HeaderOfAllCart";
-import Footer from "../card/Footer";
+import Footer from "./../Shared/Footer";
 
 const OrderComplete = () => {
   return (

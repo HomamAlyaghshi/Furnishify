@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../card/NavBar";
+import NavBar from "../Shared/NavBar";
 import HeaderOfAllAccount from "./HeaderOfAllAccount";
-import Footer from "../card/Footer";
+import Footer from "./../Shared/Footer";
 import SideBar from "./SideBar";
 
 const Address = () => {

@@ -8,8 +8,8 @@ import WishList from "./MyAccount/WishList";
 import MyAccountPage from "./MyAccount/MyAccountPage";
 import BlogPage from "./BlogComponents/BlogPage";
 
-const SignUp = lazy(() => import("./components/SignUp"));
-const SignIn = lazy(() => import("./components/SignIn"));
+const SignUp = lazy(() => import("./Authentication/SignUp"));
+const SignIn = lazy(() => import("./Authentication/SignIn"));
 const HomePage = lazy(() => import("./components/HomePage"));
 const ShopPage = lazy(() => import("./components/ShopPage"));
 const ProductPage = lazy(() => import("./components/ProductPage"));

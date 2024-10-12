@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../card/NavBar";
-import Footer from "../card/Footer";
+import NavBar from "../Shared/NavBar";
+import Footer from "./../Shared/Footer";
 
 import ShoppingCart from "../CartPageComponents/ShoppingCart";
 import HeaderOfAllCart from "../CartPageComponents/HeaderOfAllCart";

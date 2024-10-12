@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { AdjustmentsHorizontalIcon } from "@heroicons/react/24/outline";
-import ProductList from "../card/ProductList";
+import ProductList from "../HomePageComponents/ProductList";
 
 const Products = () => {
   const [numberOfItems, setNumberOfItems] = useState(3);

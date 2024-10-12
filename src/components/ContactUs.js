@@ -1,10 +1,10 @@
 import React from "react";
-import NavBar from "../card/NavBar";
-import Footer from "../card/Footer";
-import Values from "../card/values";
+import NavBar from "../Shared/NavBar";
+import Values from "../Shared/values";
 import HeaderOfContactUs from "../ContactUsComponents/HeaderOfContactUs";
 import FeatureSection from "../ContactUsComponents/FeatureSection";
 import ContactSection from "../ContactUsComponents/ContactSection";
+import Footer from "./../Shared/Footer";
 const ContactUs = () => {
   return (
     <div className="h-full w-full    ">

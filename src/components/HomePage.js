@@ -1,14 +1,14 @@
 import React from "react";
-import NavBar from "../card/NavBar";
-import Slider from "../card/Slider";
-import BannerGrid from "../card/BannerGrid";
-import ProductCarousel from "../card/ProductCarousel";
-import Values from "../card/values";
-import Banner from "../card/Banner";
-import BlogSectaion from "../card/BlogSectaion";
-import Newsletter from "../card/Newsletter";
-import Footer from "../card/Footer";
-import NotificationBar from "../card/NotificationBar";
+import NavBar from "../Shared/NavBar";
+import Slider from "../HomePageComponents/Slider";
+import BannerGrid from "../HomePageComponents/BannerGrid";
+import ProductCarousel from "../HomePageComponents/ProductCarousel";
+import Values from "../Shared/values";
+import Banner from "../HomePageComponents/Banner";
+import BlogSectaion from "../HomePageComponents/BlogSectaion";
+import Newsletter from "../Shared/Newsletter";
+import Footer from "../Shared/Footer";
+import NotificationBar from "../Shared/NotificationBar";
 const HomePage = () => {
   return (
     <div className="w-full h-full ">

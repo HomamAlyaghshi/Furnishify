@@ -1,6 +1,5 @@
 import React from "react";
-import SignUpForm from "../card/SignUpForm";
-
+import SignUpForm from "./SignUpForm";
 const SignUp = () => {
   return (
     <div className="mx-auto">

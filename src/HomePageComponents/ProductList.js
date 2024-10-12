@@ -1,6 +1,6 @@
 // src/ProductList.js
 import React from "react";
-import CardProduct from "./CardProduct";
+import CardProduct from "../card/CardProduct";
 import useCartStore from "../store/cartStore";
 import FlyoutCart from "../Expand/FlyoutCart";
 import "./custom-scrollbar.css";

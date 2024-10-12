@@ -1,6 +1,7 @@
 // src/useCartStore.js
 import { create } from "zustand";
 
+
 const useCartStore = create((set) => ({
   cartItems: [],
   isCartOpen: false, // حالة ظهور السلة

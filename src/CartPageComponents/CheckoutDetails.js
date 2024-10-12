@@ -9,6 +9,7 @@ import Radios from "../card/Radios";
 import { EyeIcon } from "@heroicons/react/16/solid";
 import CartProductItem from "../Expand/CartProductItem";
 import useCartStore from "../store/cartStore";
+import { Link } from "react-router-dom";
 
 const CheckoutDetails = ({ id }) => {
   const cartItems = useCartStore((state) => state.cartItems);
@@ -100,7 +101,9 @@ const CheckoutDetails = ({ id }) => {
                 </div>
               </div>
             </div>
-            <AddCart label={"Place Order"} width={"100%"} height={"52px"} />
+            <Link to={"/order-complete"}>
+              <AddCart label={"Place Order"} width={"100%"} height={"52px"} />
+            </Link>
           </div>
 
           {/*Order Summary */}

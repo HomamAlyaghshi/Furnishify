@@ -2,10 +2,10 @@ import React from "react";
 import SignInForm from "./SignInForm";
 const SignIn = () => {
   return (
-    <div className="mx-auto">
+    <div className="mx-auto h-screen">
       <div className="flex flex-col md:flex-row h-full">
         {/* صورة للهواتف */}
-        <div className="w-full md:w-1/2 h-[430px] md:h-auto">
+        <div className="w-full md:w-1/2  md:h-auto">
           <img
             src="/images/Left.png"
             alt="Left"

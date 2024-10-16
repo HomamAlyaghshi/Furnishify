@@ -53,7 +53,7 @@ const NavBar = () => {
       </div>
       {isMenuOpen && (
         <div
-          ref={menuRef} // إضافة المرجع هنا
+          ref={menuRef}
           className="absolute top-[60px] left-0 w-full bg-white shadow-md z-10"
         >
           <div className="flex flex-col items-center py-2">
@@ -75,6 +75,11 @@ const NavBar = () => {
             <Link to="/contactuspage">
               <button className="py-2 text-blackButton_50 font-medium hover:text-blackButton">
                 Contact Us
+              </button>
+            </Link>
+            <Link to="/accountpage">
+              <button className="py-2 text-blackButton_50 font-medium hover:text-blackButton">
+                My Profile
               </button>
             </Link>
           </div>

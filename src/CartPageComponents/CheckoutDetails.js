@@ -16,6 +16,10 @@ const CheckoutDetails = ({ id }) => {
   const increaseQuantity = useCartStore((state) => state.increaseQuantity);
   const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const { clearCart } = useCartStore();
+  const handleClear = () => {
+    clearCart();
+  };
 
   const handleIncrease = (id) => {
     increaseQuantity(id);
@@ -102,7 +106,12 @@ const CheckoutDetails = ({ id }) => {
               </div>
             </div>
             <Link to={"/order-complete"}>
-              <AddCart label={"Place Order"} width={"100%"} height={"52px"} />
+              <AddCart
+                label={"Place Order"}
+                width={"100%"}
+                height={"52px"}
+                onClick={handleClear}
+              />
             </Link>
           </div>
 

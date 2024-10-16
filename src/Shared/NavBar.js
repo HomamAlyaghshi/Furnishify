@@ -10,11 +10,12 @@ import {
 import FlyoutCart from "./../Expand/FlyoutCart";
 
 const NavBar = () => {
+  //ستخدمت من الستور عرض المنتجات ودالة فتح السلة واغلاقها واظهارها
   const cartItems = useCartStore((state) => state.cartItems);
   const isCartOpen = useCartStore((state) => state.isCartOpen);
   const toggleCart = useCartStore((state) => state.toggleCart);
 
-  // حساب إجمالي الكمية
+  // حساب إجمالي الكمية تبع المنتجات
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

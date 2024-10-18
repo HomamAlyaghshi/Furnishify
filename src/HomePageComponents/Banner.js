@@ -12,7 +12,7 @@ const Banner = () => {
       <div className=" md:w-[720px] h-auto md:h-[532px] md:left-[720px] pr-[16px] md:pr-[160px] pl-[16px] md:pl-[72px] flex justify-center items-center bg-background_50 ">
         {/**العمود الثاني */}
         <div className=" md:w-[452px] h-auto md:h-[200px] grid gap-[16px]">
-          <p className="text-blue font-inter text-[12px] md:text-[16px] font-bold leading-[16px] text-left">
+          <p className="text-blue font-inter text-[12px] md:text-[16px] font-bold leading-[16px] text-left animate-bounce">
             SALE UP TO 35% OFF
           </p>
           <p className="font-poppins text-[24px] md:text-[40px] font-medium leading-[28px] md:leading-[44px] tracking-[-0.4px] text-left text-blackButton">
@@ -22,8 +22,8 @@ const Banner = () => {
             It’s more affordable than ever to give every <br /> room in your
             home a stylish makeover
           </p>
-          <div className="flex border-b-2 border-blackButton w-[100px] ">
-            <button className="w-[100px] h-auto mt-2 flex items-center whitespace-nowrap">
+          <div className="flex border-b-2 border-blackButton hover:border-blue  transition-all duration-200 transform hover:scale-95 w-[100px] ">
+            <button className="w-[100px] h-auto mt-2 flex items-center whitespace-nowrap hover:text-blue transition-all duration-200 transform hover:scale-95">
               Shop Now
               <ArrowRightIcon className="ml-2 w-4 h-4 md:w-5 md:h-5" />
             </button>

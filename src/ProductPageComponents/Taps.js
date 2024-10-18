@@ -82,7 +82,11 @@ const Taps = () => {
           </div>
         </div>
       </div>
-      {/**Button TODO */}
+      <div className=" flex justify-center items-center font-inter text-base font-medium leading-7 tracking-tight text-center">
+        <button className="bg-white flex justify-center items-center rounded-[80px] py-1.5 px-10 border-[1px] border-blackButton hover:bg-1212 hover:text-white transition-all duration-300 transform hover:scale-110">
+          show more
+        </button>
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const WishlistButton = () => {
   return (
     <button
       onClick={toggleFavorite} // عند الضغط يتم استدعاء الدالة لتبديل الحالة
-      className="flex justify-center items-center w-[310px] font-inter h-[52px] px-[40px] py-[10px] gap-[10px] rounded-[8px] bg-white border border-blackButton text-blackButton"
+      className="flex justify-center items-center w-[310px] font-inter h-[52px] px-[40px] py-[10px] gap-[10px] rounded-[8px] bg-white border border-blackButton text-blackButton hover:bg-1212 hover:text-white transition-all duration-300 transform hover:scale-110 hover:text-red "
     >
       {/* عرض القلب بناءً على حالة isFavorited */}
       {isFavorited ? (

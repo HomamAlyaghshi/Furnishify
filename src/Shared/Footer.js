@@ -12,9 +12,11 @@ const Footer = () => {
     <div className="bg-blackButton h-[665px] md:h-full sm:h-[360px] py-[80px] md:px-[16px] sm:px-[160px] pb-[32px] grid gap-[49px]">
       <div className="flex flex-col items-center sm:flex-row sm:justify-between">
         <div className="flex flex-col items-center sm:flex-row sm:w-[544px] justify-between">
-          <p className="w-[105px] font-poppins text-[24px] font-[500] leading-[24px] text-center text-white">
-            3legant.
-          </p>
+          <Link to={"/homepage"}>
+            <button className="w-[105px] font-poppins text-[24px] font-[500] leading-[24px] text-center text-white hover:text-blue transition-all duration-200 hover:scale-95 transform">
+              3legant.
+            </button>
+          </Link>
           <div className="w-[1px] h-[24px] bg-gray-500 hidden sm:block"></div>
           <p className="w-full sm:w-[350px] font-inter text-[14px] font-[400] leading-[22px] text-center sm:text-left text-white">
             Gift & Decoration Store

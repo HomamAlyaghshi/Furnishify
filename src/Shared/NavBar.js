@@ -50,7 +50,7 @@ const NavBar = () => {
         </button>
       </div>
       <Link to={"/homepage"}>
-        <button className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] hover:text-blue font-bold text-blackButton">
+        <button className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] hover:text-blue transition-all duration-200 hover:scale-95 transform font-bold text-blackButton">
           3legant.
         </button>
       </Link>

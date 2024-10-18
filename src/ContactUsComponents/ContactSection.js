@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MapComponent from "./MapComponent";
-import Input from "../card/Input";
 import AddCart from "../Expand/AddCart";
+import InputForm from "../card/InputForm";
 
 const ContactSection = () => {
   const [cards, setCards] = useState([
@@ -53,9 +53,9 @@ const ContactSection = () => {
       {/** Get in touch section */}
       <div className="flex flex-col md:flex-row justify-between gap-[24px] w-full h-auto">
         <div className="h-full grid gap-[16px] w-full">
-          <Input labelText={"Full Name"} placeholder={"Your Name"} />
-          <Input labelText={"Email address"} placeholder={"Your Email"} />
-          <Input labelText={"Message"} placeholder={"Your Message"} />
+          <InputForm labelText={"Full Name"} placeholder={"Your Name"} />
+          <InputForm labelText={"Email address"} placeholder={"Your Email"} />
+          <InputForm labelText={"Message"} placeholder={"Your Message"} />
           <AddCart label={"Send Message"} width={"189px"} height={"40px"} />
         </div>
 

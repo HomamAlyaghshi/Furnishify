@@ -1,13 +1,13 @@
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const slides = [
-    { src: "/images/slider1.png", alt: "Slide 1" },
-    { src: "/images/slider1.png", alt: "Slide 2" },
-    { src: "/images/slider1.png", alt: "Slide 3" },
+    { src: "/images/slider1.jpg", alt: "Slide 1" },
+    { src: "/images/slider2.jpg", alt: "Slide 2" },
+    { src: "/images/slider3.jpg", alt: "Slide 3" },
   ];
 
   const nextSlide = () => {
@@ -20,8 +20,18 @@ const Slider = () => {
     );
   };
 
+  // Auto-slide feature
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide(); // Change to the next slide every 3 seconds
+    }, 3000);
+
+    // Cleanup the interval when component unmounts
+    return () => clearInterval(interval);
+  }, [activeIndex]); // Re-run effect when activeIndex changes
+
   return (
-    <div className="w-full max-w-[1440px] h-full px-[16px] md:px-[160px] pb-[40px] ">
+    <div className="w-full max-w-[1440px] h-full px-[16px] md:px-[160px]  ">
       {/* Slider Wrapper */}
       <div className="relative w-full h-[536px] overflow-hidden">
         {/* Slides */}
@@ -69,7 +79,7 @@ const Slider = () => {
       </div>
 
       {/** النص الذي تحت الصور */}
-      <div className="w-full max-w-[1120px] flex flex-col md:flex-row justify-center items-center my-[24px] mb-32">
+      <div className="w-full max-w-[1120px] flex flex-col md:flex-row justify-center items-center mt-[16px] sm:mb-[72px] mb-[32px] ">
         <div className="flex-1 bg-white w-full md:w-[643px] h-auto font-poppins text-[32px] md:text-[72px] font-medium leading-[38px] md:leading-[76px] tracking-[-2px] text-left">
           Simply Unique/ <br />
           Simply Better.

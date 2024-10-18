@@ -3,13 +3,13 @@ import NavBar from "../Shared/NavBar";
 import HeaderOfAllCart from "./HeaderOfAllCart";
 import Footer from "./../Shared/Footer";
 import AddCart from "../Expand/AddCart";
-import Input from "../card/Input";
 import Select from "../card/Select";
 import Radios from "../card/Radios";
 import { EyeIcon } from "@heroicons/react/16/solid";
 import CartProductItem from "../Expand/CartProductItem";
 import useCartStore from "../store/cartStore";
 import { Link } from "react-router-dom";
+import InputForm from "../card/InputForm";
 
 const CheckoutDetails = ({ id }) => {
   const cartItems = useCartStore((state) => state.cartItems);
@@ -44,11 +44,20 @@ const CheckoutDetails = ({ id }) => {
             <div className="bg-white border border-blackButton_50 rounded-md p-6 mb-6">
               <p className="text-black text-xl">Contact Information</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <Input labelText={"FIRST NAME"} placeholder={"First name"} />
-                <Input labelText={"LAST NAME"} placeholder={"Last name"} />
+                <InputForm
+                  labelText={"FIRST NAME"}
+                  placeholder={"First name"}
+                />
+                <InputForm labelText={"LAST NAME"} placeholder={"Last name"} />
               </div>
-              <Input labelText={"PHONE NUMBER"} placeholder={"Phone number"} />
-              <Input labelText={"EMAIL ADDRESS"} placeholder={"Your Email"} />
+              <InputForm
+                labelText={"PHONE NUMBER"}
+                placeholder={"Phone number"}
+              />
+              <InputForm
+                labelText={"EMAIL ADDRESS"}
+                placeholder={"Your Email"}
+              />
             </div>
 
             {/**Shipping Address Section */}
@@ -56,7 +65,7 @@ const CheckoutDetails = ({ id }) => {
               <p className="font-poppins text-xl font-medium">
                 Shipping Address
               </p>
-              <Input
+              <InputForm
                 labelText={"STREET ADDRESS *"}
                 placeholder={"Street address"}
               />
@@ -68,10 +77,13 @@ const CheckoutDetails = ({ id }) => {
                 fifthOption={"Egypt"}
                 fourthOption={"Lebanon"}
               />
-              <Input labelText={"TOWN / CITY *"} placeholder={"Town / City"} />
+              <InputForm
+                labelText={"TOWN / CITY *"}
+                placeholder={"Town / City"}
+              />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <Input labelText={"STATE"} placeholder={"State"} />
-                <Input labelText={"ZIP CODE"} placeholder={"Zip code"} />
+                <InputForm labelText={"STATE"} placeholder={"State"} />
+                <InputForm labelText={"ZIP CODE"} placeholder={"Zip code"} />
               </div>
               <div className="flex items-center mb-4">
                 <input type="checkbox" className="w-6 h-6 mr-2" />
@@ -95,13 +107,13 @@ const CheckoutDetails = ({ id }) => {
                   <p>Paypal</p>
                   <EyeIcon className="ml-auto w-6 h-6" />
                 </div>
-                <Input
+                <InputForm
                   placeholder={"1234 1234 1234"}
                   labelText={"CARD NUMBER"}
                 />
                 <div className="flex gap-2">
-                  <Input placeholder={"MM/YY"} labelText={"DATE"} />
-                  <Input placeholder={"CVC"} labelText={"CVC Code"} />
+                  <InputForm placeholder={"MM/YY"} labelText={"DATE"} />
+                  <InputForm placeholder={"CVC"} labelText={"CVC Code"} />
                 </div>
               </div>
             </div>

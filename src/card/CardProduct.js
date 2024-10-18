@@ -30,7 +30,7 @@ const CardProduct = ({ id, image, name, price, oldPrice }) => {
   };
 
   return (
-    <div className="w-[262px] h-[433px] bg-white relative group inline-block mr-[16px] ">
+    <div className="w-[262px] h-[433px] bg-white relative group inline-block mr-[16px]  ">
       {/* Overlay for title */}
       <div className="absolute top-2 left-2 p-1 w-[71px] h-[56px] rounded-[4px] grid gap-[8px] ">
         <div className="w-[67px] h-[24px] bg-white flex justify-center items-center font-inter text-[16px] font-bold leading-[16px] text-center">
@@ -58,7 +58,7 @@ const CardProduct = ({ id, image, name, price, oldPrice }) => {
 
       {/* Add button */}
       <button
-        className="absolute top-[287px] left-1/2 transform -translate-x-1/2 bg-blackButton text-white py-1 px-2 rounded-[8px] w-[230px] h-[46px] hidden group-hover:flex justify-center items-center"
+        className="absolute top-[287px] left-1/2 transform -translate-x-1/2 bg-blackButton text-white py-1 px-2 rounded-[8px] w-[230px] h-[46px] hidden group-hover:flex justify-center items-center "
         onClick={handleAddToCart}
       >
         Add to Cart

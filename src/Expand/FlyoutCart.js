@@ -91,7 +91,7 @@ const FlyoutCart = () => {
 
           {/* الفوتر */}
           {cartItems.length > 0 && (
-            <div className="p-4 sticky bottom-0 bg-white">
+            <div className="pb-4 sticky bottom-0 bg-white">
               <div className="flex justify-between">
                 <p>Subtotal</p>
                 <div>${subtotal.toFixed(2)}</div>

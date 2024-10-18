@@ -51,7 +51,7 @@ const ProductList = ({ numberOfItems }) => {
   const isCartOpen = useCartStore((state) => state.isCartOpen);
 
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto ">
       <div>
         {displayedProducts.map((product) => (
           <CardProduct

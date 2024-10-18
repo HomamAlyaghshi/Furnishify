@@ -3,11 +3,11 @@ import NavBar from "../Shared/NavBar";
 import Footer from "./../Shared/Footer";
 import HeaderOfAllAccount from "./HeaderOfAllAccount";
 import SideBar from "./SideBar";
-import Input from "../card/Input";
 import AddCart from "../Expand/AddCart";
+import InputForm from "../card/InputForm";
 const MyAccountPage = () => {
   return (
-    <div className="h-[1435px]   ">
+    <div className="h-full   ">
       <NavBar />
       <div className="flex justify-center items-center">
         <HeaderOfAllAccount />
@@ -20,9 +20,12 @@ const MyAccountPage = () => {
             {/**Form 1 */}
             <div className="w-full h-auto gap-[10px] grid">
               <div className="font-bold">Account Details</div>
-              <Input labelText={"FIRST NAME *"} placeholder={"First name"} />
-              <Input labelText={"LAST NAME *"} placeholder={"Last name"} />
-              <Input
+              <InputForm
+                labelText={"FIRST NAME *"}
+                placeholder={"First name"}
+              />
+              <InputForm labelText={"LAST NAME *"} placeholder={"Last name"} />
+              <InputForm
                 labelText={"DISPLAY NAME *"}
                 placeholder={"Display name"}
               />
@@ -30,14 +33,20 @@ const MyAccountPage = () => {
                 This will be how your name will be displayed in the account
                 section and in reviews
               </p>
-              <Input labelText={"EMAIL *"} placeholder={"Email"} />
+              <InputForm labelText={"EMAIL *"} placeholder={"Email"} />
             </div>
             {/**Form 2 */}
             <div className="w-full h-auto gap-[10px] grid">
               <p className="font-bold">Password</p>
-              <Input labelText={"OLD PASSWORD"} placeholder={"Old password"} />
-              <Input labelText={"NEW PASSWORD"} placeholder={"New password"} />
-              <Input
+              <InputForm
+                labelText={"OLD PASSWORD"}
+                placeholder={"Old password"}
+              />
+              <InputForm
+                labelText={"NEW PASSWORD"}
+                placeholder={"New password"}
+              />
+              <InputForm
                 labelText={"REPEAT NEW PASSWORD"}
                 placeholder={"Repeat new password"}
               />

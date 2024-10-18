@@ -26,7 +26,7 @@ const Values = () => {
   ]);
 
   return (
-    <div className="w-full max-w-[1440px] py-[48px] px-[16px] flex flex-wrap items-center justify-around gap-[48px]">
+    <div className="w-full max-w-[1440px] py-[48px] px-[16px] flex flex-wrap items-center justify-center gap-[48px]">
       {valueItems.map((item, index) => (
         <div
           key={index}

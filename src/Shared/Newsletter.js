@@ -21,11 +21,11 @@ const Newsletter = () => {
         <div className="flex w-full sm:w-[488px] border-b-[1px] border-b-blackButton_50">
           <EnvelopeIcon className="w-6 h-6 text-black mr-[8px]" />
           <input
-            className="font-inter w-full text-[16px] font-medium leading-[28px] tracking-[-0.4px] text-blackButton_50 bg-transparent placeholder:text-blackButton_50"
+            className="font-inter w-full text-[16px] font-medium leading-[28px] tracking-[-0.4px] text-blackButton_50 bg-transparent placeholder:text-blackButton_50 border-none outline-none focus:outline-none focus:ring-0 "
             placeholder="Email address"
             type="email"
           />
-          <button className="text-blackButton hover:text-black ml-[8px]">
+          <button className="text-blackButton hover:text-black ml-[8px] hover:text-[18px]">
             Signup
           </button>
         </div>

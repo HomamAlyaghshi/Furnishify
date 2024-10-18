@@ -10,11 +10,11 @@ import BlogPage from "./BlogComponents/BlogPage";
 
 const SignUp = lazy(() => import("./Authentication/SignUp"));
 const SignIn = lazy(() => import("./Authentication/SignIn"));
-const HomePage = lazy(() => import("./components/HomePage"));
-const ShopPage = lazy(() => import("./components/ShopPage"));
-const ProductPage = lazy(() => import("./components/ProductPage"));
-const CartPage = lazy(() => import("./components/CartPage"));
-const ContactUs = lazy(() => import("./components/ContactUs"));
+const HomePage = lazy(() => import("./MainPagesComponents/HomePage"));
+const ShopPage = lazy(() => import("./MainPagesComponents/ShopPage"));
+const ProductPage = lazy(() => import("./MainPagesComponents/ProductPage"));
+const CartPage = lazy(() => import("./MainPagesComponents/CartPage"));
+const ContactUs = lazy(() => import("./MainPagesComponents/ContactUs"));
 
 function App() {
   return (

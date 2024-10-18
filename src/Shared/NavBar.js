@@ -2,12 +2,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useCartStore from "../store/cartStore";
 import {
-  MagnifyingGlassIcon,
   UserCircleIcon,
   ShoppingBagIcon,
   Bars3Icon,
 } from "@heroicons/react/24/outline";
 import FlyoutCart from "./../Expand/FlyoutCart";
+import Search from "../Expand/SearchPage";
 
 const NavBar = () => {
   //ستخدمت من الستور عرض المنتجات ودالة فتح السلة واغلاقها واظهارها
@@ -49,9 +49,11 @@ const NavBar = () => {
           <Bars3Icon className="w-6 h-6 text-blackButton" />
         </button>
       </div>
-      <div className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] gap-0 font-bold text-blackButton">
-        3legant.
-      </div>
+      <Link to={"/homepage"}>
+        <button className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] hover:text-blue font-bold text-blackButton">
+          3legant.
+        </button>
+      </Link>
       {isMenuOpen && (
         <div
           ref={menuRef}
@@ -86,24 +88,24 @@ const NavBar = () => {
           </div>
         </div>
       )}
-      <div className="hidden md:flex w-[324px] h-[24px] gap-[40px]">
+      <div className="hidden md:flex w-[324px] h-[24px] gap-[40px] ">
         <Link to="/homepage">
-          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton transform transition-all hover:scale-90 ">
             Home
           </button>
         </Link>
         <Link to="/shoppage">
-          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton transform transition-all hover:scale-90">
             Shop
           </button>
         </Link>
         <Link to="/productpage">
-          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton">
+          <button className="grid gap-[2px] text-blackButton_50 font-medium hover:text-blackButton transform transition-all hover:scale-90">
             Product
           </button>
         </Link>
         <Link to={"/contactuspage"}>
-          <button className="w-[76px] grid gap-[2px] text-blackButton_50 font-medium whitespace-nowrap hover:text-blackButton">
+          <button className="w-[76px] grid gap-[2px] text-blackButton_50 font-medium whitespace-nowrap hover:text-blackButton transform transition-all hover:scale-90">
             Contact Us
           </button>
         </Link>
@@ -119,17 +121,17 @@ const NavBar = () => {
         </div>
       </div>
       <div className="hidden md:flex w-[130px] h-[28px] flex gap-[16px]">
-        <MagnifyingGlassIcon className="w-6 h-6 text-blackButton" />
+        <Search />
         <Link to={"/accountpage"}>
           <button>
-            <UserCircleIcon className="w-6 h-6 text-blackButton" />
+            <UserCircleIcon className="w-6 h-6 text-blackButton hover:text-blue" />
           </button>
         </Link>
-        <div className="flex gap-[4px]">
+        <div className="flex gap-[4px] ">
           <button onClick={toggleCart}>
-            <ShoppingBagIcon className="w-6 h-6 text-blackButton" />
+            <ShoppingBagIcon className="w-6 h-6 text-blackButton hover:text-blue" />
           </button>
-          <div className="w-[20px] h-[20px] mt-1 bg-blackButton rounded-full text-white text-center flex justify-center items-center">
+          <div className="w-[20px] h-[20px] mt-1 bg-blackButton rounded-full text-white text-center flex justify-center items-center ">
             {totalQuantity}
           </div>
         </div>

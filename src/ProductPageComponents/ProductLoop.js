@@ -8,20 +8,39 @@ import StarsDisplay from "./StarsDisplay";
 import CountDownn from "../card/CountDown";
 
 const ProductLoop = () => {
-  const [buttonTexts] = useState(["Home", "Shop", "Living Room", "Product"]);
+  // الصور المستخدمة في السلايدر
+  const initialImages = [
+    { src: "/images/cart1-big.png", alt: "cart1-big" },
+    { src: "/images/cart2-big.png", alt: "cart2-big" },
+    { src: "/images/cart3-big.png", alt: "cart3-big" },
+    { src: "/images/cart4-big.png", alt: "cart4-big" },
+  ];
+
+  // الحالة التي تتحكم بالصورة الكبيرة والصور الصغيرة
+  const [activeImage, setActiveImage] = useState(initialImages[0]);
+  const [smallImages, setSmallImages] = useState(initialImages.slice(1)); // استبعاد الصورة الأولى
+
+  const handleImageClick = (index) => {
+    // نسخ الصور الصغيرة
+    const newSmallImages = [...smallImages];
+
+    // استبدال الصورة الكبيرة مع الصورة التي تم النقر عليها
+    const selectedImage = newSmallImages[index];
+    newSmallImages[index] = activeImage; // استبدال الصورة الكبيرة بالصورة الصغيرة
+    setActiveImage(selectedImage); // جعل الصورة الصغيرة المختارة هي الكبيرة
+    setSmallImages(newSmallImages); // تحديث الصور الصغيرة
+  };
 
   return (
     <div className="w-full h-auto md:pt-4 md:px-4 md:px-160 md:h-[1042px]">
       {/* شريط التنقل */}
       <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start">
-        {buttonTexts.map((text, index) => (
+        {["Home", "Shop", "Living Room", "Product"].map((text, index) => (
           <div key={index} className="flex items-center">
             <button className="h-6 w-auto flex items-center text-blackButton_50 hover:text-blackButton">
               <span className="whitespace-nowrap">{text}</span>
             </button>
-            {index < buttonTexts.length - 1 && (
-              <ChevronRightIcon className="w-3 h-3 ml-1" />
-            )}
+            {index < 3 && <ChevronRightIcon className="w-3 h-3 ml-1" />}
           </div>
         ))}
       </div>
@@ -29,27 +48,24 @@ const ProductLoop = () => {
       <div className="mt-4 flex flex-col md:flex-row justify-around gap-6 md:gap-24">
         {/* قسم الصور */}
         <div className="w-full md:w-[549px] h-auto md:h-[919px] grid">
+          {/* الصورة الكبيرة */}
           <img
-            src="/images/cart1-big.png"
-            alt="cart1-big"
-            className="w-full h-auto object-cover"
+            src={activeImage.src}
+            alt={activeImage.alt}
+            className="w-full h-full object-cover" // استخدم ارتفاع ثابت للصورة الكبيرة
           />
+
+          {/* الصور الصغيرة أسفل الصورة الكبيرة */}
           <div className="flex justify-between mt-4">
-            <img
-              alt="2"
-              src="/images/cart2-big.png"
-              className="w-1/4 h-auto object-cover"
-            />
-            <img
-              alt="3"
-              src="/images/cart3-big.png"
-              className="w-1/4 h-auto object-cover"
-            />
-            <img
-              alt="4"
-              src="/images/cart4-big.png"
-              className="w-1/4 h-auto object-cover"
-            />
+            {smallImages.map((image, index) => (
+              <img
+                key={index}
+                alt={image.alt}
+                src={image.src}
+                className="w-1/4 h-32 object-cover cursor-pointer" // ارتفاع ثابت للصور الصغيرة
+                onClick={() => handleImageClick(index)} // عند الضغط على الصورة الصغيرة
+              />
+            ))}
           </div>
         </div>
 
@@ -115,22 +131,22 @@ const ProductLoop = () => {
                   <img
                     alt="color1"
                     src="/images/cart1.png"
-                    className="w-18 h-18 object-cover border border-gray-300"
+                    className="w-18 h-18 object-cover"
                   />
                   <img
                     alt="color2"
-                    src="/images/cart1.png"
-                    className="w-18 h-18 object-cover border border-gray-300"
+                    src="/images/cart2.png"
+                    className="w-18 h-18 object-cover"
                   />
                   <img
                     alt="color3"
-                    src="/images/cart1.png"
-                    className="w-18 h-18 object-cover border border-gray-300"
+                    src="/images/cart3.png"
+                    className="w-18 h-18 object-cover"
                   />
                   <img
                     alt="color4"
-                    src="/images/cart1.png"
-                    className="w-18 h-18 object-cover border border-gray-300"
+                    src="/images/cart4.png"
+                    className="w-18 h-18 object-cover"
                   />
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ labelText, placeholder, height }) => {
+const InputForm = ({ labelText, placeholder, height }) => {
   return (
     <div className="h-auto w-full">
       <label className="form-control" style={{ height: height }}>
@@ -19,4 +19,4 @@ const Input = ({ labelText, placeholder, height }) => {
   );
 };
 
-export default Input;
+export default InputForm;

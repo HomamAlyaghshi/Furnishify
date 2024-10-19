@@ -43,7 +43,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="h-[60px] w-full md:px-[160px] md:py-[16px] flex justify-between items-center">
+    <div className="h-[60px] w-full  md:py-[16px] flex justify-between px-4 items-center bg-slate-50 shadow-sm  mb-4">
       <div className="md:hidden flex items-center ">
         <button onClick={toggleMenu}>
           <Bars3Icon className="w-6 h-6 text-blackButton" />
@@ -51,7 +51,7 @@ const NavBar = () => {
       </div>
       <Link to={"/homepage"}>
         <button className="font-poppins text-[24px] leading-[24px] text-center w-[105px] h-[24px] hover:text-blue transition-all duration-200 hover:scale-95 transform font-bold text-blackButton">
-          3legant.
+          Furnishify.
         </button>
       </Link>
       {isMenuOpen && (

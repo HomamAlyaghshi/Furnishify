@@ -5,9 +5,9 @@ import ReviewCart from "../Expand/ReviewCart";
 
 const Taps = () => {
   return (
-    <div className="grid md:gap-[48px] h-auto md:h-auto py-10 md:py-[40px] px-4 md:px-[160px]">
+    <div className="grid md:gap-[48px] h-auto md:h-auto py-10 md:py-[40px] px-4 md:px-[60px]  w-full">
       {/**Taps / Menu */}
-      <div className="w-full md:w-[1120px] h-auto flex flex-col md:flex-row gap-4 md:gap-[80px] border-b border-b-blackButton_50 text-blackButton_50">
+      <div className="w-full md:w-full h-auto flex flex-col md:flex-row gap-4 md:gap-[80px] border-b border-b-blackButton_50 text-blackButton_50">
         <button className="w-full text-left md:w-auto hover:text-blackButton">
           Additional Info
         </button>
@@ -21,7 +21,7 @@ const Taps = () => {
       {/**Review Section */}
       <div className="h-auto w-full grid gap-[40px]">
         {/**Top Review Section  */}
-        <div className="w-full md:w-[1120px] h-auto">
+        <div className="w-full md:w-full h-auto">
           <div className="w-full h-auto grid gap-[24px]">
             <h1 className="font-poppins text-[28px] font-medium leading-[34px] tracking-[-0.6px] text-left w-full h-auto">
               Customer Reviews
@@ -45,7 +45,7 @@ const Taps = () => {
           </div>
         </div>
         {/**comment section */}
-        <div className="w-full md:w-[1120px] h-auto grid gap-[40px]">
+        <div className="w-full  h-auto grid gap-[40px]">
           {/** Top section "Review and select button" */}
           <div className="w-full h-[48px] flex justify-between items-center">
             <div className="font-poppins text-[28px] whitespace-nowrap font-medium leading-[34px] tracking-[-0.6px] text-left text-black">

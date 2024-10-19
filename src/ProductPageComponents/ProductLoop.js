@@ -10,7 +10,7 @@ import CountDownn from "../card/CountDown";
 const ProductLoop = () => {
   // الصور المستخدمة في السلايدر
   const initialImages = [
-    { src: "/images/cart1-big.png", alt: "cart1-big" },
+    { src: "/images/cart-big1.jpg", alt: "cart1-big" },
     { src: "/images/cart2-big.png", alt: "cart2-big" },
     { src: "/images/cart3-big.png", alt: "cart3-big" },
     { src: "/images/cart4-big.png", alt: "cart4-big" },
@@ -32,9 +32,9 @@ const ProductLoop = () => {
   };
 
   return (
-    <div className="w-full h-auto md:pt-4 md:px-4 md:px-160 md:h-[1042px]">
+    <div className="w-full h-auto md:pt-4 md:px-4  md:h-[1042px]">
       {/* شريط التنقل */}
-      <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start">
+      <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start ml-12">
         {["Home", "Shop", "Living Room", "Product"].map((text, index) => (
           <div key={index} className="flex items-center">
             <button className="h-6 w-auto flex items-center text-blackButton_50 hover:text-blackButton">
@@ -52,17 +52,17 @@ const ProductLoop = () => {
           <img
             src={activeImage.src}
             alt={activeImage.alt}
-            className="w-full h-full object-cover" // استخدم ارتفاع ثابت للصورة الكبيرة
+            className="w-full h-full object-cover  border-[2px] border-blackButton"
           />
 
           {/* الصور الصغيرة أسفل الصورة الكبيرة */}
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-12 ">
             {smallImages.map((image, index) => (
               <img
                 key={index}
                 alt={image.alt}
                 src={image.src}
-                className="w-1/4 h-32 object-cover cursor-pointer" // ارتفاع ثابت للصور الصغيرة
+                className="w-1/4 h-32 flex  object-cover cursor-pointer border-[2px] border-blackButton hover:scale-105 transition-all duration-300 transform"
                 onClick={() => handleImageClick(index)} // عند الضغط على الصورة الصغيرة
               />
             ))}

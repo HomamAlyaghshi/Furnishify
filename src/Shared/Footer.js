@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:flex-row sm:w-[544px] justify-between">
           <Link to={"/homepage"}>
             <button className="w-[105px] font-poppins text-[24px] font-[500] leading-[24px] text-center text-white hover:text-blue transition-all duration-200 hover:scale-95 transform">
-              3legant.
+              Furnishify.
             </button>
           </Link>
           <div className="w-[1px] h-[24px] bg-gray-500 hidden sm:block"></div>
@@ -53,7 +53,7 @@ const Footer = () => {
       <div className="w-full border-t-[1px] border-b-blackButton_50 text-white">
         <div className="flex flex-col items-center w-full mt-[28px] sm:flex-row sm:justify-between">
           <div className="font-poppins md:flex gap-10 text-[12px] font-[400] leading-[20px] text-center sm:text-left">
-            Copyright © 2023 3legant. All rights reserved
+            Copyright © 2024 Furnishify. All rights reserved
             <div className="font-poppins text-[12px] font-[600] leading-[20px] text-center sm:text-left">
               Privacy Policy
             </div>

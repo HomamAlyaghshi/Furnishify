@@ -9,9 +9,9 @@ const Products = () => {
     const updateNumberOfItems = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth <= 768) {
-        setNumberOfItems(2); // 2 items for mobile size
+        setNumberOfItems(1); // 1 item for mobile size
       } else {
-        setNumberOfItems(3); // 3 items for laptop size
+        setNumberOfItems(3); // 3 items for larger screens
       }
     };
 
@@ -22,17 +22,17 @@ const Products = () => {
       window.removeEventListener("resize", updateNumberOfItems); // Clean up on component unmount
     };
   }, []);
+
   return (
-    <div className="w-full h-[1707px]  flex  justify-center gap-[24px] md:pt-[60px] md:px-[160px] md:pb-[100px]">
+    <div className="w-full h-[1707px] flex justify-center gap-[24px] md:pt-[60px] md:px-[160px] md:pb-[100px]">
       {/**SideBar */}
       <div className="w-[262px] h-[582px] grid gap-[32px] hidden md:block ">
-        <div className="w-full h-[32px] flex ga-[8px] text-1212 text-[20px] font-semibold leading-[32px] text-left">
-          {/**TODO : Edit this icon */}
+        <div className="w-full h-[32px] flex gap-[8px] text-[20px] font-semibold leading-[32px] text-left">
           <AdjustmentsHorizontalIcon />
           Filter
         </div>
-        <div className="w-[262px] h-[264px] gap-4 border-b  grid">
-          <h1 className="text-1212 text-[16px] font-semibold leading-[26px] text-left ">
+        <div className="w-[262px] h-[264px] gap-4 border-b grid">
+          <h1 className="text-[16px] font-semibold leading-[26px] text-left">
             CATEGORIES
           </h1>
           <div className="space-y-2">
@@ -46,8 +46,8 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="w-[254px] h-[222px] gap-4 border-b pb-60 ">
-          <h1 className="text-1212 text-[16px] font-semibold leading-[26px] text-left mb-4">
+        <div className="w-[254px] h-[222px] gap-4 border-b pb-60">
+          <h1 className="text-[16px] font-semibold leading-[26px] text-left mb-4">
             PRICE
           </h1>
           <div className="space-y-2">
@@ -97,7 +97,7 @@ const Products = () => {
         </div>
       </div>
       {/**Grid */}
-      <div className="md:w-[834px] w-full  md:h-[1547px] gap-[40px]    ">
+      <div className="md:w-[834px] w-full md:h-[1547px] gap-[40px]">
         <div className="flex flex-wrap justify-between w-full h-auto gap-4">
           <div className="w-full md:w-auto h-[32px] text-black font-inter text-lg font-semibold ml-5 leading-8 text-left">
             Living Room
@@ -152,18 +152,18 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="grid h-[1467px] justify-between items-center  gap-[24px] md:w-[834px]   ">
-          <div className="flex  md:gap-[24px] w-[834px] h-[433px] justify-between    ">
+        <div className="grid h-[1467px] sm:justify-between justify-center items-center gap-[24px] md:w-[834px]">
+          <div className="flex md:gap-[24px] w-full h-[433px] sm:justify-between">
             <ProductList numberOfItems={numberOfItems} />
           </div>
-          <div className="flex md:gap-[24px] w-[834px] h-[433px] justify-between    ">
+          <div className="flex md:gap-[24px] w-full h-[433px] sm:justify-between">
             <ProductList numberOfItems={numberOfItems} />
           </div>
-          <div className="flex md:gap-[24px] w-[834px] h-[433px] justify-between    ">
+          <div className="flex md:gap-[24px] w-full h-[433px] sm:justify-between">
             <ProductList numberOfItems={numberOfItems} />
           </div>
-          <div className=" flex justify-center items-center font-inter text-base font-medium leading-7 tracking-tight text-center">
-            <button className="bg-white flex justify-center items-center rounded-[80px] py-1.5 px-10 border-[1px] border-blackButton hover:bg-1212 hover:text-white transition-all duration-300 transform hover:scale-110">
+          <div className="flex justify-center items-center font-inter text-base font-medium leading-7 tracking-tight text-center">
+            <button className="bg-white sm:flex  justify-center items-center rounded-[80px] py-1.5 px-10 border-[1px] border-blackButton hover:bg-1212 hover:text-white transition-all duration-300 transform hover:scale-110">
               show more
             </button>
           </div>

@@ -6,7 +6,7 @@ const NotificationBar = () => {
 
   return (
     isVisible && (
-      <div className="relative h-[40px]  bg-background_50 flex justify-center items-center gap-[12px] animate-pulse ">
+      <div className="relative h-[40px]  bg-yellow-100 flex justify-center items-center gap-[12px] animate-pulse ">
         <img alt="v5" src="/images/v5.png" className="w-[20px] h-[18px]" />
         <p className="text-blackButton text-[12px] sm:text-[14px] flex items-center">
           30% off storewide — Limited time!

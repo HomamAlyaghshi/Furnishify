@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Flyout-scrollbar.css";
 import AddCart from "./AddCart";
 import { Link } from "react-router-dom";
@@ -14,45 +14,46 @@ const FlyoutCart = () => {
     closeCart,
   } = useCartStore();
 
-  const subtotal = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
-  const total = subtotal;
+  const [isVisible, setIsVisible] = useState(false);
 
-  // تعطيل التمرير وإغلاق السلة باستخدام زر Esc
   useEffect(() => {
-    // تعطيل التمرير في body
-    document.body.style.overflow = "hidden";
+    setIsVisible(true);
 
-    // دالة لإغلاق السلة عند الضغط على زر Esc
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         closeCart();
       }
     };
 
-    // إضافة مستمع للضغطات على لوحة المفاتيح
     window.addEventListener("keydown", handleKeyDown);
 
-    // تنظيف التأثير عند إزالة المكون أو إغلاق السلة
     return () => {
-      document.body.style.overflow = "";
+      setIsVisible(false);
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [closeCart]);
 
+  const subtotal = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const total = subtotal;
+
   return (
     <>
-      {/* Overlay خلفية مظللة */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 ${
+          isVisible ? "block" : "hidden"
+        }`}
         onClick={closeCart}
       ></div>
 
-      {/* Drawer السلة */}
-      <div className="fixed top-0 right-0 w-[413px] h-full bg-white py-[40px] px-[25px] flex flex-col justify-between z-50 transition-transform duration-300">
-        {/* زر الإغلاق */}
+      {/* Drawer السلة مع تأثير الظهور */}
+      <div
+        className={`fixed top-0 right-0 w-[413px] h-full bg-white py-[40px] px-[25px] flex flex-col justify-between z-50 transition-transform duration-300 transform ${
+          isVisible ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <button
           onClick={closeCart}
           className="absolute top-4 right-4 text-gray-500 text-xl"
@@ -60,7 +61,6 @@ const FlyoutCart = () => {
           &times;
         </button>
 
-        {/* محتوى السلة */}
         <div className="w-full flex flex-col justify-between flex-grow">
           <div className="grid gap-[8px]">
             <div className="h-auto font-poppins text-[28px] font-medium leading-[34px] tracking-[-0.6px] text-left">
@@ -89,7 +89,6 @@ const FlyoutCart = () => {
             )}
           </div>
 
-          {/* الفوتر */}
           {cartItems.length > 0 && (
             <div className="pb-4 sticky bottom-0 bg-white">
               <div className="flex justify-between">

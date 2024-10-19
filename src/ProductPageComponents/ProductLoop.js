@@ -34,7 +34,7 @@ const ProductLoop = () => {
   return (
     <div className="w-full h-auto md:pt-4 md:px-4  md:h-[1042px]">
       {/* شريط التنقل */}
-      <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start ml-12">
+      <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start sm:ml-12">
         {["Home", "Shop", "Living Room", "Product"].map((text, index) => (
           <div key={index} className="flex items-center">
             <button className="h-6 w-auto flex items-center text-blackButton_50 hover:text-blackButton">

@@ -37,7 +37,10 @@ const Taps = () => {
             </div>
           </div>
           <div className="relative w-full mt-6 md:mt-[30px]">
-            <input className="bg-white w-full md:h-[72px] border border-blackButton_50 rounded-lg md:rounded-[16px] px-4 md:px-[24px] py-3 md:py-[16px]" />
+            <input
+              placeholder="Write Your Comment...."
+              className="bg-white w-full md:h-[72px] border border-blackButton_50 rounded-lg md:rounded-[16px] px-4 md:px-[24px] py-3 md:py-[16px]"
+            />
 
             <div className="sm:flex justify-center items-center absolute top-2 right-4 md:top-auto md:right-[30px] md:-mt-[70px] bg-blue-500 hidden md:block">
               <AddCart label="Write Review" width="176px" height="40px" />

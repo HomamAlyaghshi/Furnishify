@@ -32,7 +32,10 @@ const ProductLoop = () => {
   };
 
   return (
-    <div className="w-full h-auto md:pt-4 md:px-4  md:h-[1042px]">
+    <div
+      data-aos="fade-up"
+      className="w-full h-auto md:pt-4 md:px-4  md:h-[1042px]"
+    >
       {/* شريط التنقل */}
       <div className="h-6 w-full md:w-[466px] flex md:flex-nowrap gap-4 bg-white justify-start sm:ml-12">
         {["Home", "Shop", "Living Room", "Product"].map((text, index) => (

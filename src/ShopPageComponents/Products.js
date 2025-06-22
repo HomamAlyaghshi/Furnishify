@@ -26,7 +26,10 @@ const Products = () => {
   return (
     <div className="w-full h-[1707px] flex justify-center gap-[24px] md:pt-[60px] md:px-[160px] md:pb-[100px]">
       {/**SideBar */}
-      <div className="w-[262px] h-[582px] grid gap-[32px] hidden md:block ">
+      <div
+        data-aos="fade-down"
+        className="w-[262px] h-[582px] grid gap-[32px] hidden md:block "
+      >
         <div className="w-full h-[32px] flex gap-[8px] text-[20px] font-semibold leading-[32px] text-left">
           <AdjustmentsHorizontalIcon />
           Filter
@@ -97,7 +100,10 @@ const Products = () => {
         </div>
       </div>
       {/**Grid */}
-      <div className="md:w-[834px] w-full md:h-[1547px] gap-[40px]">
+      <div
+        data-aos="fade-up"
+        className="md:w-[834px] w-full md:h-[1547px] gap-[40px]"
+      >
         <div className="flex flex-wrap justify-between w-full h-auto gap-4">
           <div className="w-full md:w-auto h-[32px] text-black font-inter text-lg font-semibold ml-5 leading-8 text-left">
             Living Room

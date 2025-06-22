@@ -5,7 +5,10 @@ import ReviewCart from "../Expand/ReviewCart";
 
 const Taps = () => {
   return (
-    <div className="grid md:gap-[48px] h-auto md:h-auto py-10 md:py-[40px] px-4 md:px-[60px]  w-full">
+    <div
+      data-aos="fade-up"
+      className="grid md:gap-[48px] h-auto md:h-auto py-10 md:py-[40px] px-4 md:px-[60px]  w-full"
+    >
       {/**Taps / Menu */}
       <div className="w-full md:w-full h-auto flex flex-col md:flex-row gap-4 md:gap-[80px] border-b border-b-blackButton_50 text-blackButton_50">
         <button className="w-full text-left md:w-auto hover:text-blackButton">

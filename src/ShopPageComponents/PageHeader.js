@@ -6,7 +6,10 @@ const PageHeader = () => {
   const [buttonTexts] = useState(["Home", "Shop"]);
 
   return (
-    <div className="relative h-[392px] px-[16px] md:px-[160px]">
+    <div
+      data-aos="fade-up"
+      className="relative h-[392px] px-[16px] md:px-[160px]"
+    >
       <img
         alt="Header"
         src="/images/page-header.png"

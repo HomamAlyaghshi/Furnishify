@@ -4,52 +4,101 @@ import { Link } from "react-router-dom";
 
 const SignInForm = () => {
   return (
-    <form className="p-4">
-      <h1 className="font-poppins text-[32px] font-medium mb-4 text-left">
+    <form className="p-6 sm:p-8 space-y-6">
+      {" "}
+      {/* Adjusted padding and added spacing */}
+      <h1 className="font-poppins text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
+        {" "}
+        {/* Larger, bolder title */}
         Sign In
       </h1>
-      <div className="flex items-center mb-4">
-        <p className="font-inter text-base text-text_neutral text-[12px]">
-          Don’t have an account yet?
-        </p>
+      <div className="flex items-center text-sm text-gray-600 mb-6">
+        {" "}
+        {/* Adjusted text size and color */}
+        <p>Don’t have an account yet?</p>
         <Link to="/signup">
-          <button className="font-inter text-kiwi text-base font-semibold text-[12px] ml-1">
+          <button
+            type="button" // Use type="button" for non-submit buttons
+            className="text-kiwi font-bold ml-1 hover:underline focus:outline-none focus:ring-2 focus:ring-kiwi focus:ring-opacity-50 transition-all duration-200" // Added hover and focus states
+          >
             Sign Up
           </button>
         </Link>
       </div>
-
-      <div className="mb-4 text-text_neutral">
-        <label className="block text-[12px]">
-          Your username or email address
-        </label>
-        <input className="mb-4 w-full border-b border-hr p-1 text-[12px]" />
-        <div className="mb-4">
-          <div className="flex items-center justify-between">
-            <label className="mr-2 text-[12px]">Password</label>
-            <EyeIcon className="w-5 h-5 text-gray-500 cursor-pointer" />
-          </div>
+      <div className="space-y-6">
+        {" "}
+        {/* Grouping form fields with consistent spacing */}
+        {/* Username/Email Field */}
+        <div>
+          <label
+            htmlFor="username-email"
+            className="block text-sm font-medium text-gray-700 mb-1"
+          >
+            {" "}
+            {/* Improved label styling */}
+            Your username or email address
+          </label>
           <input
-            className="w-full border-b border-hr p-1 text-[12px]"
-            type="password"
+            id="username-email"
+            type="text" // Explicitly define type
+            className="w-full border-b-2 border-gray-300 focus:border-kiwi outline-none p-2 text-sm transition-all duration-200 placeholder-gray-400" // Improved input styles, focus effect
+            placeholder="e.g., yourname@example.com" // Added placeholder
           />
         </div>
-        <div className="flex items-center justify-between">
+        {/* Password Field */}
+        <div>
+          <div className="flex items-center justify-between mb-1">
+            <label
+              htmlFor="password"
+              className="text-sm font-medium text-gray-700"
+            >
+              {" "}
+              {/* Improved label styling */}
+              Password
+            </label>
+            <EyeIcon className="w-5 h-5 text-gray-500 cursor-pointer hover:text-gray-700 transition-colors duration-200" />{" "}
+            {/* Added hover effect */}
+          </div>
+          <input
+            id="password"
+            type="password"
+            className="w-full border-b-2 border-gray-300 focus:border-kiwi outline-none p-2 text-sm transition-all duration-200" // Improved input styles, focus effect
+            placeholder="••••••••" // Added placeholder
+          />
+        </div>
+        {/* Remember Me & Forget Password */}
+        <div className="flex items-center justify-between mt-4">
+          {" "}
+          {/* Adjusted margin-top */}
           <div className="flex items-center">
             <input
               type="checkbox"
-              id="checkbox"
-              className="w-[24px] h-[24px] mr-[12px]"
+              id="remember-me" // Changed id for clarity
+              className="w-5 h-5 text-kiwi border-gray-300 rounded focus:ring-kiwi cursor-pointer" // Styled checkbox
             />
-            <p className="font-inter text-base text-[12px]">Remember me</p>
+            <label
+              htmlFor="remember-me"
+              className="ml-2 text-sm text-gray-700 cursor-pointer"
+            >
+              Remember me
+            </label>{" "}
+            {/* Associated label with input */}
           </div>
-          <button className="text-blackButton font-bold text-[12px]">
+          <button
+            type="button"
+            className="text-kiwi font-bold text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-kiwi focus:ring-opacity-50 transition-all duration-200" // Styled button, hover/focus states
+          >
             Forget password?
           </button>
         </div>
       </div>
+      {/* Sign In Button */}
       <Link to="/homepage">
-        <button className="w-full h-[48px] mt-2 text-white bg-blackButton rounded-[8px] flex items-center justify-center">
+        <button
+          type="submit" // Correct type for a submit button
+          className="w-full h-12 mt-8 bg-black hover:bg-gray-800 text-white font-semibold rounded-lg flex items-center justify-center
+                     transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-50" // Enhanced button styling
+        >
           Sign In
         </button>
       </Link>

@@ -5,7 +5,7 @@ import Footer from "./../Shared/Footer";
 import SideBar from "./SideBar";
 const WishList = () => {
   return (
-    <div className="h-full   ">
+    <div data-aos="fade-up" className="h-full   ">
       <NavBar />
       <div className="flex justify-center items-center">
         <HeaderOfAllAccount />

@@ -32,7 +32,7 @@ const CheckoutDetails = ({ id }) => {
   };
 
   return (
-    <div className="h-full w-full">
+    <div data-aos="fade-up" className="h-full w-full">
       <NavBar />
       <div className="flex justify-center items-center w-full">
         <HeaderOfAllCart />

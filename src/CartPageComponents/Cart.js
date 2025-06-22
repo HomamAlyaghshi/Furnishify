@@ -13,7 +13,10 @@ const Cart = () => {
   };
 
   return (
-    <div className="w-full md:max-w-[643px] h-auto grid justify-center items-center">
+    <div
+      data-aos="fade-up"
+      className="w-full md:max-w-[643px] h-auto grid justify-center items-center"
+    >
       {/* Table Header */}
       <header className="w-full pb-6 border-b border-b-blackButton_50 flex justify-between font-inter text-[14px] md:text-[16px] font-semibold leading-[26px] text-left ">
         <p>Product</p>

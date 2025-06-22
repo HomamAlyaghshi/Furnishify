@@ -5,7 +5,7 @@ import Footer from "./../Shared/Footer";
 
 const OrderComplete = () => {
   return (
-    <div className="h-full md:h-full">
+    <div data-aos="fade-up" className="h-full md:h-full">
       <NavBar />
       {/**Cart Section */}
       <div className="py-8 px-4 md:px-16 lg:px-32 grid place-items-center">

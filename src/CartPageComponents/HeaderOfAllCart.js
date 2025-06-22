@@ -25,7 +25,10 @@ const HeaderOfAllCart = () => {
   };
 
   return (
-    <div className="w-full max-w-[832px] h-full gap-[20px] grid justify-center items-center p-4 mt-8 md:mt-16">
+    <div
+      data-aos="fade-up"
+      className="w-full max-w-[832px] h-full gap-[20px] grid justify-center items-center p-4 mt-8 md:mt-16"
+    >
       <h1 className="font-poppins text-[32px] md:text-[54px] font-medium leading-[38px] md:leading-[58px] tracking-[-1px] text-center">
         {getTitle()}
       </h1>

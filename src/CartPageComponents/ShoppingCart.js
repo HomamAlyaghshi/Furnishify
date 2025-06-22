@@ -4,7 +4,7 @@ import Cart from "./Cart";
 
 const ShoppingCart = () => {
   return (
-    <div className="w-full px-4">
+    <div data-aos="fade-up" className="w-full px-4">
       {/* Cart */}
       <div className="max-w-[1120px] mx-auto">
         <div className="w-full h-auto">

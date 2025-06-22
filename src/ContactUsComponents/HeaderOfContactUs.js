@@ -1,7 +1,10 @@
 import React from "react";
 const HeaderOfContactUs = () => {
   return (
-    <div className="w-full h-auto gap-[20px] md:gap-[30px] grid mx-auto ">
+    <div
+      data-aos="fade-up"
+      className="w-full h-auto gap-[20px] md:gap-[30px] grid mx-auto "
+    >
       {/* الأزرار (Home -> Contact Us) */}
       <div className="h-[24px] w-auto flex gap-[8px] md:gap-[16px] text-sm md:text-lg">
         <button className="hover:underline">Home &rarr;</button>

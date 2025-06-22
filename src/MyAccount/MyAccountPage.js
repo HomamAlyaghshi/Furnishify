@@ -7,7 +7,7 @@ import AddCart from "../Expand/AddCart";
 import InputForm from "../card/InputForm";
 const MyAccountPage = () => {
   return (
-    <div className="h-full   ">
+    <div data-aos="fade-up" className="h-full   ">
       <NavBar />
       <div className="flex justify-center items-center">
         <HeaderOfAllAccount />

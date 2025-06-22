@@ -6,7 +6,7 @@ import SideBar from "./SideBar";
 
 const Address = () => {
   return (
-    <div className="h-auto">
+    <div data-aos="fade-up" className="h-auto">
       <NavBar />
       <div className="flex justify-center items-center">
         <HeaderOfAllAccount />

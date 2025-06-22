@@ -6,7 +6,7 @@ const Map = () => {
   const position = [51.505, -0.09]; // إحداثيات المركز
 
   return (
-    <div className="w-full h-[404px] ">
+    <div data-aos="fade-up" className="w-full h-[404px] ">
       <MapContainer
         center={position}
         zoom={13}

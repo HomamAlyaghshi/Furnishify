@@ -21,7 +21,10 @@ const CartProduct = ({ image, productName, color, price, onRemove, id }) => {
   const totalPrice = quantity * price;
 
   return (
-    <div className="w-full max-w-[643px] h-auto py-6 gap-0 border-b flex  flex-col md:flex-row justify-between ">
+    <div
+      data-aos="fade-up"
+      className="w-full max-w-[643px] h-auto py-6 gap-0 border-b flex  flex-col md:flex-row justify-between "
+    >
       {/* Cart Item */}
       <div className="flex w-full md:w-[316px] gap-4">
         <img alt={productName} src={image} className="w-[80px] h-[96px]" />

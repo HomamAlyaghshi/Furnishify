@@ -60,7 +60,10 @@ const ElementsCartSummary = () => {
   const total = subtotal + shippingCost;
 
   return (
-    <div className="w-full md:w-[413px] h-auto grid gap-4 rounded-[6px] p-[24px] border-[1px] border-blackButton_50">
+    <div
+      data-aos="fade-up"
+      className="w-full md:w-[413px] h-auto grid gap-4 rounded-[6px] p-[24px] border-[1px] border-blackButton_50"
+    >
       <h1 className="font-poppins text-[20px] font-medium leading-[28px] text-left">
         Cart Summary
       </h1>

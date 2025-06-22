@@ -26,14 +26,23 @@ const ContactSection = () => {
   ]);
 
   return (
-    <div className="w-full h-auto grid gap-[40px] mx-auto p-4">
+    <div
+      data-aos="fade-up"
+      className="w-full h-auto grid gap-[40px] mx-auto p-4"
+    >
       {/**INFO section */}
-      <div className="font-poppins text-[32px] md:text-[40px] font-medium leading-[44px] text-center w-full">
+      <div
+        data-aos="fade-up"
+        className="font-poppins text-[32px] md:text-[40px] font-medium leading-[44px] text-center w-full"
+      >
         Contact Us
       </div>
 
       {/** Cards section */}
-      <div className="w-full h-auto gap-[24px] flex flex-col md:flex-row justify-center items-center">
+      <div
+        data-aos="fade-up"
+        className="w-full h-auto gap-[24px] flex flex-col md:flex-row justify-center items-center"
+      >
         {cards.map((card, index) => (
           <div
             key={index}
@@ -51,7 +60,10 @@ const ContactSection = () => {
       </div>
 
       {/** Get in touch section */}
-      <div className="flex flex-col md:flex-row justify-between gap-[24px] w-full h-auto">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col md:flex-row justify-between gap-[24px] w-full h-auto"
+      >
         <div className="h-full grid gap-[16px] w-full">
           <InputForm labelText={"Full Name"} placeholder={"Your Name"} />
           <InputForm labelText={"Email address"} placeholder={"Your Email"} />

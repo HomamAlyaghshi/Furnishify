@@ -2,7 +2,7 @@ import React from "react";
 
 const CartProductItem = ({ item, onIncrease, onDecrease, onRemove }) => {
   return (
-    <div className="flex items-center gap-4">
+    <div data-aos="fade-up" className="flex items-center gap-4">
       <img
         src={item.image}
         alt={item.name}

@@ -22,7 +22,10 @@ const BlogSection = () => {
   ]);
 
   return (
-    <div className=" h-auto py-[24px] md:py-[48px] grid gap-[24px] justify-center items-center text-blackButton">
+    <div
+      data-aos="fade-right"
+      className=" h-auto py-[24px] md:py-[48px] grid gap-[24px] justify-center items-center text-blackButton"
+    >
       <div className=" md:w-[1121px] h-auto md:h-[88px] flex flex-col md:flex-row justify-between items-center px-4 md:px-0">
         <div className="font-poppins text-[28px] md:text-[40px] font-medium leading-[32px] md:leading-[44px] tracking-[-0.4px] text-left">
           Articles

@@ -31,7 +31,10 @@ const Slider = () => {
   }, [activeIndex]); // Re-run effect when activeIndex changes
 
   return (
-    <div className="w-full max-w-[1440px] h-full px-[16px] md:px-[160px]  ">
+    <div
+      data-aos="fade-down"
+      className="w-full max-w-[1440px] h-full px-[16px] md:px-[160px]  "
+    >
       {/* Slider Wrapper */}
       <div className="relative w-full h-[536px] overflow-hidden">
         {/* Slides */}
@@ -79,7 +82,10 @@ const Slider = () => {
       </div>
 
       {/** النص الذي تحت الصور */}
-      <div className="w-full max-w-[1120px] flex flex-col md:flex-row justify-center items-center mt-[16px] sm:mb-[72px] mb-[32px] ">
+      <div
+        data-aos="fade-up"
+        className="w-full max-w-[1120px] flex flex-col md:flex-row justify-center items-center mt-[16px] sm:mb-[72px] mb-[32px] "
+      >
         <div className="flex-1 bg-white w-full md:w-[643px] h-auto font-poppins text-[32px] md:text-[72px] font-medium leading-[38px] md:leading-[76px] tracking-[-2px] text-left">
           Simply Unique/ <br />
           Simply Better.

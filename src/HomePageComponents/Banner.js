@@ -8,8 +8,12 @@ const Banner = () => {
         className="bg-slate-500 w-full md:w-1/2 h-full"
         alt="Banner"
         src="/images/Banner.png"
+        data-aos="fade-left"
       />
-      <div className=" md:w-[720px] h-auto md:h-[532px] md:left-[720px] pr-[16px] md:pr-[160px] pl-[16px] md:pl-[72px] flex justify-center items-center bg-background_50 ">
+      <div
+        data-aos="fade-right"
+        className=" md:w-[720px] h-auto md:h-[532px] md:left-[720px] pr-[16px] md:pr-[160px] pl-[16px] md:pl-[72px] flex justify-center items-center bg-background_50 "
+      >
         {/**العمود الثاني */}
         <div className=" md:w-[452px] h-auto md:h-[200px] grid gap-[16px]">
           <p className="text-blue font-inter text-[12px] md:text-[16px] font-bold leading-[16px] text-left animate-bounce">

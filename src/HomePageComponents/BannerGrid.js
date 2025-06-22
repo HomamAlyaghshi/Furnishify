@@ -5,7 +5,10 @@ const BannerGrid = () => {
   return (
     <div className="h-full md:max-h-[664px] w-full bg-white flex flex-col md:flex-row gap-[24px] justify-center items-center relative">
       {/* العمود الأيسر */}
-      <div className="relative h-[664px] md:h-[664px] w-full md:w-[548px]">
+      <div
+        data-aos="fade-left"
+        className="relative h-[664px] md:h-[664px] w-full md:w-[548px]"
+      >
         <img
           alt="banner1"
           src="/images/banner1.png"
@@ -13,7 +16,11 @@ const BannerGrid = () => {
         />
 
         {/* العناصر فوق الصورة */}
-        <div className="absolute top-[48px] left-[16px] sm:left-[48px] w-[90%] sm:w-[360px] h-[78px] flex flex-col items-start justify-center gap-[12px]">
+
+        <div
+          data-aos="fade-right"
+          className="absolute top-[48px] left-[16px] sm:left-[48px] w-[90%] sm:w-[360px] h-[78px] flex flex-col items-start justify-center gap-[12px]"
+        >
           <p className="font-poppins text-[28px] sm:text-[34px] font-medium leading-[38px] tracking-[-0.6px] text-left">
             Living Room
           </p>
@@ -27,7 +34,10 @@ const BannerGrid = () => {
       </div>
 
       {/* العمود الأيمن */}
-      <div className="h-[664px] md:h-[664px] w-full md:w-[548px] flex flex-col gap-[24px]">
+      <div
+        data-aos="fade-right"
+        className="h-[664px] md:h-[664px] w-full md:w-[548px] flex flex-col gap-[24px]"
+      >
         {/* العنصر العلوي */}
         <div className="relative h-[50%]">
           <img

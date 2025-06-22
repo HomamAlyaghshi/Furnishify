@@ -1,4 +1,4 @@
-import { React, lazy, Suspense } from "react";
+import { React, lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CheckoutDetails from "./CartPageComponents/CheckoutDetails";
 import OrderComplete from "./CartPageComponents/OrderComplete";
@@ -7,6 +7,9 @@ import OrderHistory from "./MyAccount/OrderHistory";
 import WishList from "./MyAccount/WishList";
 import MyAccountPage from "./MyAccount/MyAccountPage";
 import BlogPage from "./BlogComponents/BlogPage";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const SignUp = lazy(() => import("./Authentication/SignUp"));
 const SignIn = lazy(() => import("./Authentication/SignIn"));
@@ -17,6 +20,12 @@ const CartPage = lazy(() => import("./MainPagesComponents/CartPage"));
 const ContactUs = lazy(() => import("./MainPagesComponents/ContactUs"));
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // مدة الحركة بالميلي ثانية
+      once: true, // هل تعمل الحركة مرة واحدة فقط أم مع كل Scroll
+    });
+  }, []);
   return (
     <Router>
       <Suspense>
